@@ -1,10 +1,4 @@
 
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './styles.css';
-import Home from './home.jsx';
-
 //const App = () => {
 //  return (
 //    <div>
@@ -29,30 +23,16 @@ import Home from './home.jsx';
 //    <a href="#cart" className="nav-link">Warenkorb</a>
 //  </nav>
 //);
+import React from 'react';
 
-//const FilterButton = () => (
-//  <button className="filter-button">Filter</button>
-//);
-
-//const products = [
-//  { id: 1, name: "Product 1", description: "Description 1", price: "€1100" },
-//  { id: 2, name: "Product 2", description: "Description 2", price: "€2000" },
-//  { id: 4, name: "Product 4", description: "Description 4", price: "€400" },
-//  { id: 5, name: "Product 5", description: "Description 5", price: "€1500" },
-//];
-
-//const ProductGrid = () => (
-  /*{ <div className="product-grid">
-    {products.map(product => (
-      <ProductCard key={product.id} product={product} />
-    ))}
-  </div>} */
-///);
-
-/* const App = () => {
+const Home = () => {
   return (
     <div className="app-container">
-      <FilterButton />
+      <div className="sidebar">
+        <div className="filter-box">
+          <FilterButton />
+        </div>
+      </div>
       <ProductList />
     </div>
   );
@@ -85,20 +65,6 @@ const ProductCard = ({ product }) => (
     <p>{product.price}</p>
     <button className="cart-button">In den Warenkorb</button>
   </div>
-); */
-
-
-/* const Error = () => (
-  <div>404 Not Found</div>
 );
- */
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <Router>
-    <Routes>
-      <Route path="/" element={<Home />} />
-    </Routes>
-  </Router>
-);
+export default Home;
