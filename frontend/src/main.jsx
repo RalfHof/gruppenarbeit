@@ -3,7 +3,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './styles.css';
-import Home from './home.jsx';
+import Home from './pages/home.jsx';
+import Smartwatches from './pages/smartwatches.jsx';
+//import Smartphones from './pages/smartphones.jsx'
+
+
+//import Smartphones from "./pages/smartphones";
+//import './smartwaches.css';
 
 //const App = () => {
 //  return (
@@ -94,11 +100,16 @@ const ProductCard = ({ product }) => (
  */
 
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+const App = () => (
   <Router>
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/smartwatches" element={<Smartwatches />} />
+       {/* { <Route path="/smartphones" element={<Smartphones />} />
+       } */}
     </Routes>
   </Router>
 );
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);

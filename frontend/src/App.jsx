@@ -1,9 +1,22 @@
-import { useState } from "react";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import Home from './home';
+import Smartwatches from './smartwatches';
+import './styles.css';
 
-function App() {
-  const [count, setCount] = useState(0);
+const App = () => {
+  return (
+    <div className="split-container">
+      <div className="left-pane">
+        <Home />
+      </div>
+      <div className="right-pane">
+        <Smartwatches />
+      </div>
+    </div>
+  );
+};
 
-  return <></>;
-}
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
 
-export default App;
