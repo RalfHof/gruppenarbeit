@@ -1,23 +1,28 @@
 const express = require('express');
 const cors = require('cors');
-
-const app = express();
+const fs = require('fs').promises;
+const bodyParser = require('body-parser');
 const PORT = 5000;
 
+const app = express();
+
 app.use(cors());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
-const products = [
-  { id: 1, name: "Product 1", description: "Description 1", price: "€100" },
-  { id: 2, name: "Product 2", description: "Description 2", price: "€200" },
-  { id: 3, name: "Product 3", description: "Description 3", price: "€300" },
-  { id: 4, name: "Product 4", description: "Description 4", price: "€400" },
-  { id: 5, name: "Product 5", description: "Description 5", price: "€500" },
-];
+const readFileAndSendResponse = async (filePath, res) => {
+  try {
+    const data = await fs.readFile(filePath, "utf8");
+    res.status(200).json(JSON.parse(data));
+  } catch (error) {
+    console.error(`Fehler beim Auslesen der Datei ${filePath}`, error);
+    res.status(500).json(error);
+  }
+};
 
-app.get('/api/products', (req, res) => {
-  res.json(products);
-});
+app.get("/smartphones", (req, res) => readFileAndSendResponse("smartphones.json", res));
+app.get("/smartwatches", (req, res) => readFileAndSendResponse("smartwatches.json", res));
 
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`Server running on http://localhost:${PORT}`);
 });

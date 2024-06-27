@@ -1,0 +1,162 @@
+[
+    {
+      "id": 1,
+      "name": "iPhone 14 Pro Max",
+      "manufacturer": "Apple",
+      "price": 1299,
+      "description": "lorem ipsum dolor sit amet, consectetur adipis occ tempor invid id vel   scelerisque",
+      "image": "https://www.zdnet.com/a/img/resize/e889f5ab7352d3b8a21ccf591d37c32342c36c4b/2024/02/02/fe353b53-8b16-494b-96e0-2d83788da0f2/dsc01662-enhanced-nr.jpg?auto=webp&fit=crop&height=360&width=640"
+    },
+    {
+      "id": 2,
+      "name": "Samsung Galaxy S23 Ultra",
+      "manufacturer": "Samsung",
+      "price": 1199,
+      "description": "lorem ipsum dolor sit amet, consectetur adipis occ tempor invid id vel   scelerisque",
+      "image": "https://www.zdnet.com/a/img/resize/e889f5ab7352d3b8a21ccf591d37c32342c36c4b/2024/02/02/fe353b53-8b16-494b-96e0-2d83788da0f2/dsc01662-enhanced-nr.jpg?auto=webp&fit=crop&height=360&width=640"
+    },
+    {
+      "id": 3,
+      "name": "Google Pixel 7 Pro",
+      "manufacturer": "Google",
+      "price": 899,
+      "description": "lorem ipsum dolor sit amet, consectetur adipis occ tempor invid id vel   scelerisque",
+      "image": "https://www.zdnet.com/a/img/resize/e889f5ab7352d3b8a21ccf591d37c32342c36c4b/2024/02/02/fe353b53-8b16-494b-96e0-2d83788da0f2/dsc01662-enhanced-nr.jpg?auto=webp&fit=crop&height=360&width=640"
+    },
+    {
+      "id": 4,
+      "name": "Xiaomi 13 Pro",
+      "manufacturer": "Xiaomi",
+      "price": 999,
+      "description": "lorem ipsum dolor sit amet, consectetur adipis occ tempor invid id vel   scelerisque",
+      "image": "https://www.zdnet.com/a/img/resize/e889f5ab7352d3b8a21ccf591d37c32342c36c4b/2024/02/02/fe353b53-8b16-494b-96e0-2d83788da0f2/dsc01662-enhanced-nr.jpg?auto=webp&fit=crop&height=360&width=640"
+    },
+    {
+      "id": 5,
+      "name": "OnePlus 11",
+      "manufacturer": "OnePlus",
+      "price": 829,
+      "description": "lorem ipsum dolor sit amet, consectetur adipis occ tempor invid id vel   scelerisque",
+      "image": "https://www.zdnet.com/a/img/resize/e889f5ab7352d3b8a21ccf591d37c32342c36c4b/2024/02/02/fe353b53-8b16-494b-96e0-2d83788da0f2/dsc01662-enhanced-nr.jpg?auto=webp&fit=crop&height=360&width=640"
+    },
+    {
+      "id": 6,
+      "name": "Oppo Find X5 Pro",
+      "manufacturer": "Oppo",
+      "price": 1299,
+      "description": "lorem ipsum dolor sit amet, consectetur adipis occ tempor invid id vel   scelerisque",
+      "image": "https://www.zdnet.com/a/img/resize/e889f5ab7352d3b8a21ccf591d37c32342c36c4b/2024/02/02/fe353b53-8b16-494b-96e0-2d83788da0f2/dsc01662-enhanced-nr.jpg?auto=webp&fit=crop&height=360&width=640"
+    },
+    {
+      "id": 7,
+      "name": "Motorola Edge 30 Pro",
+      "manufacturer": "Motorola",
+      "price": 799,
+      "description": "lorem ipsum dolor sit amet, consectetur adipis occ tempor invid id vel   scelerisque",
+      "image": "https://www.zdnet.com/a/img/resize/e889f5ab7352d3b8a21ccf591d37c32342c36c4b/2024/02/02/fe353b53-8b16-494b-96e0-2d83788da0f2/dsc01662-enhanced-nr.jpg?auto=webp&fit=crop&height=360&width=640"
+    },
+    {
+      "id": 8,
+      "name": "Sony Xperia 1 IV",
+      "manufacturer": "Sony",
+      "price": 1399,
+      "description": "lorem ipsum dolor sit amet, consectetur adipis occ tempor invid id vel   scelerisque",
+      "image": "https://www.zdnet.com/a/img/resize/e889f5ab7352d3b8a21ccf591d37c32342c36c4b/2024/02/02/fe353b53-8b16-494b-96e0-2d83788da0f2/dsc01662-enhanced-nr.jpg?auto=webp&fit=crop&height=360&width=640"
+    },
+    {
+      "id": 9,
+      "name": "Huawei P50 Pro",
+      "manufacturer": "Huawei",
+      "price": 1199,
+      "description": "lorem ipsum dolor sit amet, consectetur adipis occ tempor invid id vel   scelerisque",
+      "image": "https://www.zdnet.com/a/img/resize/e889f5ab7352d3b8a21ccf591d37c32342c36c4b/2024/02/02/fe353b53-8b16-494b-96e0-2d83788da0f2/dsc01662-enhanced-nr.jpg?auto=webp&fit=crop&height=360&width=640"
+    },
+    {
+      "id": 10,
+      "name": "iPhone 13",
+      "manufacturer": "Apple",
+      "price": 899,
+      "description": "lorem ipsum dolor sit amet, consectetur adipis occ tempor invid id vel   scelerisque",
+      "image": "https://www.zdnet.com/a/img/resize/e889f5ab7352d3b8a21ccf591d37c32342c36c4b/2024/02/02/fe353b53-8b16-494b-96e0-2d83788da0f2/dsc01662-enhanced-nr.jpg?auto=webp&fit=crop&height=360&width=640"
+    },
+    {
+      "id": 11,
+      "name": "Samsung Galaxy Z Fold4",
+      "manufacturer": "Samsung",
+      "price": 1799,
+      "description": "lorem ipsum dolor sit amet, consectetur adipis occ tempor invid id vel   scelerisque",
+      "image": "https://www.zdnet.com/a/img/resize/e889f5ab7352d3b8a21ccf591d37c32342c36c4b/2024/02/02/fe353b53-8b16-494b-96e0-2d83788da0f2/dsc01662-enhanced-nr.jpg?auto=webp&fit=crop&height=360&width=640"
+    },
+    {
+      "id": 12,
+      "name": "Nothing Phone (1)",
+      "manufacturer": "Nothing",
+      "price": 469,
+      "description": "lorem ipsum dolor sit amet, consectetur adipis occ tempor invid id vel   scelerisque",
+      "image": "https://www.zdnet.com/a/img/resize/e889f5ab7352d3b8a21ccf591d37c32342c36c4b/2024/02/02/fe353b53-8b16-494b-96e0-2d83788da0f2/dsc01662-enhanced-nr.jpg?auto=webp&fit=crop&height=360&width=640"
+    },
+    {
+      "id": 13,
+      "name": "Asus ROG Phone 6",
+      "manufacturer": "Asus",
+      "price": 999,
+      "description": "lorem ipsum dolor sit amet, consectetur adipis occ tempor invid id vel   scelerisque",
+      "image": "https://www.zdnet.com/a/img/resize/e889f5ab7352d3b8a21ccf591d37c32342c36c4b/2024/02/02/fe353b53-8b16-494b-96e0-2d83788da0f2/dsc01662-enhanced-nr.jpg?auto=webp&fit=crop&height=360&width=640"
+    },
+    {
+      "id": 14,
+      "name": "Realme GT 2 Pro",
+      "manufacturer": "Realme",
+      "price": 749,
+      "description": "lorem ipsum dolor sit amet, consectetur adipis occ tempor invid id vel   scelerisque",
+      "image": "https://www.zdnet.com/a/img/resize/e889f5ab7352d3b8a21ccf591d37c32342c36c4b/2024/02/02/fe353b53-8b16-494b-96e0-2d83788da0f2/dsc01662-enhanced-nr.jpg?auto=webp&fit=crop&height=360&width=640"
+    },
+    {
+      "id": 15,
+      "name": "Vivo X80 Pro",
+      "manufacturer": "Vivo",
+      "price": 1199,
+      "description": "lorem ipsum dolor sit amet, consectetur adipis occ tempor invid id vel   scelerisque",
+      "image": "https://www.zdnet.com/a/img/resize/e889f5ab7352d3b8a21ccf591d37c32342c36c4b/2024/02/02/fe353b53-8b16-494b-96e0-2d83788da0f2/dsc01662-enhanced-nr.jpg?auto=webp&fit=crop&height=360&width=640"
+    },
+    {
+      "id": 16,
+      "name": "iPhone SE (2022)",
+      "manufacturer": "Apple",
+      "price": 479,
+      "description": "lorem ipsum dolor sit amet, consectetur adipis occ tempor invid id vel   scelerisque",
+      "image": "https://www.zdnet.com/a/img/resize/e889f5ab7352d3b8a21ccf591d37c32342c36c4b/2024/02/02/fe353b53-8b16-494b-96e0-2d83788da0f2/dsc01662-enhanced-nr.jpg?auto=webp&fit=crop&height=360&width=640"
+    },
+    {
+      "id": 17,
+      "name": "Samsung Galaxy A53 5G",
+      "manufacturer": "Samsung",
+      "price": 449,
+      "description": "lorem ipsum dolor sit amet, consectetur adipis occ tempor invid id vel   scelerisque",
+      "image": "https://www.zdnet.com/a/img/resize/e889f5ab7352d3b8a21ccf591d37c32342c36c4b/2024/02/02/fe353b53-8b16-494b-96e0-2d83788da0f2/dsc01662-enhanced-nr.jpg?auto=webp&fit=crop&height=360&width=640"
+    },
+    {
+      "id": 18,
+      "name": "Google Pixel 6a",
+      "manufacturer": "Google",
+      "price": 449,
+      "description": "lorem ipsum dolor sit amet, consectetur adipis occ tempor invid id vel   scelerisque",
+      "image": "https://www.zdnet.com/a/img/resize/e889f5ab7352d3b8a21ccf591d37c32342c36c4b/2024/02/02/fe353b53-8b16-494b-96e0-2d83788da0f2/dsc01662-enhanced-nr.jpg?auto=webp&fit=crop&height=360&width=640"
+    },
+    {
+      "id": 19,
+      "name": "Xiaomi Redmi Note 11 Pro",
+      "manufacturer": "Xiaomi",
+      "price": 299,
+      "description": "lorem ipsum dolor sit amet, consectetur adipis occ tempor invid id vel   scelerisque",
+      "image": "https://www.zdnet.com/a/img/resize/e889f5ab7352d3b8a21ccf591d37c32342c36c4b/2024/02/02/fe353b53-8b16-494b-96e0-2d83788da0f2/dsc01662-enhanced-nr.jpg?auto=webp&fit=crop&height=360&width=640"
+    },
+    {
+      "id": 20,
+      "name": "Fairphone 4",
+      "manufacturer": "Fairphone",
+      "price": 579,
+      "description": "lorem ipsum dolor sit amet, consectetur adipis occ tempor invid id vel   scelerisque",
+      "image": "https://www.zdnet.com/a/img/resize/e889f5ab7352d3b8a21ccf591d37c32342c36c4b/2024/02/02/fe353b53-8b16-494b-96e0-2d83788da0f2/dsc01662-enhanced-nr.jpg?auto=webp&fit=crop&height=360&width=640"
+    }
+  ]
