@@ -1,125 +1,187 @@
+/* Allgemeine Stile für das gesamte Dokument */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+html,
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  background-color: white;
-  color: black;
+  height: 100%;
+  max-width: 100%;
+  background-color: #f2f2f2;
 }
 
-.split-container {
-  display: flex;
-  height: 100vh;
+h1,
+h2,
+h3,
+p,
+a,
+ul {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
 }
 
-.left-pane, .right-pane {
-  flex: 1;
-  padding: 1rem;
-  overflow-y: auto;
-}
-
-.home-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.filter-button {
-  align-self: flex-start;
-  margin-bottom: 1rem;
-  padding: 0.8rem 2rem;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-.product-list {
-  width: 600%;
-  max-width: 600px;
-}
-
-.product-card {
-  border: 4px solid #ccc;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  background-color: rgb(234, 236, 238);
-  color: black;
-  text-align: center;
-}
-
-.cart-button {
-  margin-top: 1rem;
-  padding: 0.5rem;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-.smartwatches-container {
-  width: 80%;
-  margin: 20px auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.top-tiles {
+/* Navigation Styles */
+nav {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  gap: 10px;
-  margin-bottom: 20px;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  text-transform: uppercase;
+  background-color: #3d5a6c;
+  border-bottom: 1px solid black;
+  padding: 20px;
 }
 
-.small-tile {
-  background-color: #ccc;
-  padding: 10px;
-  text-align: center;
+nav h1 {
+  justify-self: start;
+  font-size: 2em;
+  color: #f8f8f9;
 }
 
-.most-purchased-button {
-  margin-bottom: 20px;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  cursor: pointer;
+nav p {
+  justify-self: start;
+  color: #f8f8f9;
 }
 
-.most-purchased-button:hover {
-  background-color: #0056b3;
-}
-
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+nav ul {
+  display: flex;
+  justify-self: center;
+  list-style: none;
   gap: 20px;
 }
 
-.product-card {
-  background-color: #fff;
-  padding: 20px;
-  border: 1px solid #ddd;
-  text-align: center;
+nav a {
+  color: #f8f8f9;
 }
 
-.price {
-  font-size: 1.2em;
-  color: #333;
+nav .cart {
+  justify-self: end;
 }
 
-.add-to-cart-button {
-  padding: 10px 20px;
-  background-color: #28a745;
-  color: #fff;
+/* Main Styles */
+main {
+  flex: 1;
+  margin: 20px 0 20px 0;
+}
+
+.mainContainer {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  text-transform: uppercase;
+}
+
+/* Item Card Styles */
+.itemCard {
+  border: 1px solid black;
+  border-radius: 15px;
+  width: 980px;
+  margin: 15px 0 15px 0;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.itemContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.itemImage {
+  max-width: 100%;
+  height: auto;
+}
+
+.itemDescription {
+  margin: 10px 0;
+}
+
+.itemPrice {
+  font-weight: bold;
+}
+
+.cart-button {
+  background-color: #3d5a6c;
+  color: #f8f8f9;
   border: none;
+  padding: 10px 20px;
   cursor: pointer;
+  border-radius: 5px;
 }
 
-.add-to-cart-button:hover {
-  background-color: #218838;
+.cart-button:hover {
+  background-color: #2b3f4d;
 }
+
+/* Filter Styles */
+.itemFilter {
+  width: 400px;
+  height: 700px;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 15px;
+  margin: 15px;
+  display: grid;
+  justify-content: center;
+}
+
+/* Container Styles */
+.shardContainer {
+  display: grid;
+  justify-content: center;
+  gap: 20px;
+}
+
+.shardRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.shard {
+  text-align: center;
+  height: 250px;
+  width: 250px;
+  border: 1px solid black;
+}
+
+.spacer {
+  margin: 20px;
+  border-bottom: 1px solid black;
+}
+
+/* Footer Styles */
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  text-transform: uppercase;
+  background-color: #3d5a6c;
+  color: #f8f8f9;
+  padding: 20px;
+  border-top: 1px solid black;
+}
+
+footer div {
+  justify-self: start;
+  font-size: 1em;
+}
+
+footer ul {
+  display: flex;
+  justify-self: end;
+  list-style: none;
+  gap: 20px;
+}
+
+footer a {
+  color: #f8f8f9;
+}
+
 
 
 

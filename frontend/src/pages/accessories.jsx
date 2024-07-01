@@ -1,9 +1,7 @@
-import React from "react";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../components/header";
 import Nav from "../components/nav";
 import Footer from "../components/footer";
-import "../styles.css";
 
 const Item = ({ item }) => (
   <div className="itemCard">
@@ -36,7 +34,7 @@ const Main = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:5000/smartphones");
+        const response = await fetch("http://localhost:5000/accessories");
         const result = await response.json();
         setData(result);
       } catch (error) {
@@ -48,14 +46,14 @@ const Main = () => {
   }, []);
 
   return (
-    <main className="mainContainer">
+    <main className="accessoriesMain">
       <div className="itemFilter">
         <h2>Filter</h2>
-        <Filter title="Hersteller" options={['Apple', 'Samsung', 'Nokia', 'Huawei']} />
-        <Filter title="Preis" options={['0 - 500', '500 - 1000', '1000 - 1500', '1500 - 2000']} />
+        <Filter title="Kategorie" options={['Hüllen', 'Ladegeräte', 'Kopfhörer', 'Bildschirmschutz']} />
+        <Filter title="Preis" options={['0 - 20', '20 - 50', '50 - 100', '100 - 200']} />
       </div>
       <div className="content">
-        <h2>Smartphones</h2>
+        <h2>Zubehör</h2>
         <div className="itemContainer">
           {data.map(item => (
             <Item key={item.id} item={item} />
@@ -66,15 +64,16 @@ const Main = () => {
   );
 };
 
-const Smartphones = () => (
+const Accessories = () => (
   <>
-    <Header site="Smartphones" />
+    <Header site="Zubehör" />
     <Nav />
     <Main />
     <Footer />
   </>
 );
 
-export default Smartphones;
+export default Accessories;
+
 
 

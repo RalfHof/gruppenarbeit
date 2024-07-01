@@ -1,47 +1,57 @@
-import React from 'react';
+import React from "react";
+import Header from "../components/header";
+import Nav from "../components/nav";
+import Footer from "../components/footer";
 
-const Home = () => {
+const categories = [
+  { name: "Smartphones", link: "/smartphones" },
+  { name: "Smartwatches", link: "/smartwatches" }
+];
+
+const manufacturers = ["Hersteller 1", "Hersteller 2", "Hersteller 3", "Hersteller 4"];
+
+const Main = () => {
+  const renderShards = (items, type) =>
+    items.map((item, index) => (
+      <a key={index} href={item.link || "#"}>
+        <div className="shard">{type === "categories" ? item.name : item}</div>
+      </a>
+    ));
+
   return (
-    <div className="home-container">
-      <div className="sidebar">
-        <div className="filter-box">
-          <FilterButton />
+    <>
+      <main className="homeMain">
+        <div className="shardContainer">
+          <div className="shardRow">
+            {renderShards(categories, "categories")}
+            {renderShards(manufacturers, "manufacturers")}
+          </div>
+          <div className="spacer"></div>
+          <div className="shardRow">
+            {renderShards(categories, "categories")}
+            {renderShards(manufacturers, "manufacturers")}
+          </div>
         </div>
-      </div>
-      <ProductList />
-    </div>
+        <div className="spacer">
+          <h2>Häufig gekauft:</h2>
+        </div>
+      </main>
+    </>
   );
 };
 
-const FilterButton = () => (
-  <button className="filter-button">Filter</button>
-);
-
-const products = [
-  { id: 1, name: "Samsung", description: "Description 1", price: "€100" },
-  { id: 2, name: "Apple", description: "Description 2", price: "€200" },
-  { id: 3, name: "Nokia", description: "Description 3", price: "€300" },
-  { id: 4, name: "Huawei", description: "Description 4", price: "€400" },
-  { id: 5, name: "GoogleFone", description: "Description 5", price: "€500" },
-];
-
-const ProductList = () => (
-  <div className="product-list">
-    {products.map(product => (
-      <ProductCard key={product.id} product={product} />
-    ))}
-  </div>
-);
-
-const ProductCard = ({ product }) => (
-  <div className="product-card">
-    <h2>{product.name}</h2>
-    <p>{product.description}</p>
-    <p>{product.price}</p>
-    <button className="cart-button">In den Warenkorb</button>
-  </div>
-);
+function Home() {
+  return (
+    <>
+      <Header site={"Startseite"} />
+      <Nav />
+      <Main />
+      <Footer />
+    </>
+  );
+}
 
 export default Home;
+
 
 
