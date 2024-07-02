@@ -1,5 +1,4 @@
-import React from "react";
-import { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../components/header";
 import Nav from "../components/nav";
 import Footer from "../components/footer";
@@ -51,13 +50,13 @@ const Main = () => {
     <main className="mainContainer">
       <div className="itemFilter">
         <h2>Filter</h2>
-        <Filter title="Hersteller" options={['Apple', 'Samsung', 'Nokia', 'Huawei']} />
-        <Filter title="Preis" options={['0 - 500', '500 - 1000', '1000 - 1500', '1500 - 2000']} />
+        <Filter title="Hersteller" options={["Apple", "Samsung", "Nokia", "Huawei"]} />
+        <Filter title="Preis" options={["0 - 500", "500 - 1000", "1000 - 1500", "1500 - 2000"]} />
       </div>
       <div className="content">
         <h2>Smartphones</h2>
         <div className="itemContainer">
-          {data.map(item => (
+          {data.map((item) => (
             <Item key={item.id} item={item} />
           ))}
         </div>
@@ -76,5 +75,4 @@ const Smartphones = () => (
 );
 
 export default Smartphones;
-
 

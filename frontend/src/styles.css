@@ -70,7 +70,7 @@ main {
 
 .mainContainer {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 300px 1fr;
   text-transform: uppercase;
 }
 
@@ -119,14 +119,27 @@ main {
 
 /* Filter Styles */
 .itemFilter {
-  width: 400px;
-  height: 700px;
-  border: 1px solid black;
-  border-radius: 15px;
+  width: 100%;
   padding: 15px;
-  margin: 15px;
-  display: grid;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.filter p {
+  font-weight: bold;
+}
+
+.filter select {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 /* Container Styles */
@@ -181,6 +194,11 @@ footer ul {
 footer a {
   color: #f8f8f9;
 }
+
+/* Additional Styles
+
+
+
 
 
 
