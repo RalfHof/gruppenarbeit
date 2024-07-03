@@ -5,21 +5,15 @@
   min-height: 100%;
 }
 
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  max-width: 100%;
-  background-color: #f2f2f2;
+  width: 100%;
+  background-color: #d5e9f1;
 }
 
-h1,
-h2,
-h3,
-p,
-a,
-ul {
+h1, h2, h3, p, a, ul {
   margin: 0;
   padding: 0;
   text-decoration: none;
@@ -65,7 +59,7 @@ nav .cart {
 /* Main Styles */
 main {
   flex: 1;
-  margin: 20px 0 20px 0;
+  margin: 20px 0;
 }
 
 .mainContainer {
@@ -74,34 +68,50 @@ main {
   text-transform: uppercase;
 }
 
+.homeMain .mainContainer {
+  grid-template-columns: 1fr;
+}
+
 /* Item Card Styles */
-.itemCard {
+.itemCard, .productCard {
   border: 1px solid black;
   border-radius: 15px;
-  width: 980px;
-  margin: 15px 0 15px 0;
+  width: 100%;
+  margin: 15px 0;
   padding: 15px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+  position: relative; /* Add relative positioning for absolute children */
 }
 
 .itemContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 90%;
+}
+
+.itemName {
+  font-size: 1.2em;
+  margin-bottom: 10px;
 }
 
 .itemImage {
-  max-width: 100%;
-  height: auto;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
 }
 
 .itemDescription {
   margin: 10px 0;
+  text-align: center;
 }
 
 .itemPrice {
   font-weight: bold;
+  position: absolute;
+  top: 15px;
+  right: 15px;
 }
 
 .cart-button {
@@ -111,6 +121,9 @@ main {
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
 }
 
 .cart-button:hover {
@@ -119,7 +132,7 @@ main {
 
 /* Filter Styles */
 .itemFilter {
-  width: 100%;
+  width: 80%;
   padding: 15px;
   display: flex;
   flex-direction: column;
@@ -129,7 +142,7 @@ main {
 .filter {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 4px;
 }
 
 .filter p {
@@ -137,9 +150,27 @@ main {
 }
 
 .filter select {
-  padding: 5px;
+  padding: 4px;
   border: 1px solid #ccc;
   border-radius: 5px;
+}
+
+.filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #f2f2f2;
+}
+
+.filter-button:hover {
+  background-color: #ddd;
 }
 
 /* Container Styles */
@@ -149,10 +180,14 @@ main {
   gap: 20px;
 }
 
+.content{
+  text-align: center;
+}
+
 .shardRow {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
 }
 
 .shard {
@@ -195,7 +230,10 @@ footer a {
   color: #f8f8f9;
 }
 
-/* Additional Styles
+
+
+
+
 
 
 

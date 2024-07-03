@@ -20,6 +20,8 @@ const readFileAndSendResponse = async (filePath, res) => {
   }
 };
 
+
+
 app.get("/smartphones", (req, res) => readFileAndSendResponse("smartphones.json", res));
 app.get("/smartwatches", (req, res) => readFileAndSendResponse("smartwatches.json", res));
 

@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../components/header";
 import Nav from "../components/nav";
 import Footer from "../components/footer";
+import "../styles.css";
 
 const Filter = ({ title, options }) => (
   <div className="filter">
@@ -30,37 +31,36 @@ const Item = ({ item }) => (
 
 const Main = () => {
   const dummyItems = [
-    { id: 1, name: "Produkt 1", description: "Beschreibung 1", price: 10, image: "https://via.placeholder.com/150" },
-    { id: 2, name: "Produkt 2", description: "Beschreibung 2", price: 20, image: "https://via.placeholder.com/150" },
-    { id: 3, name: "Produkt 3", description: "Beschreibung 3", price: 30, image: "https://via.placeholder.com/150" },
-    { id: 4, name: "Produkt 4", description: "Beschreibung 4", price: 40, image: "https://via.placeholder.com/150" },
-    { id: 5, name: "Produkt 5", description: "Beschreibung 5", price: 50, image: "https://via.placeholder.com/150" },
-    { id: 6, name: "Produkt 6", description: "Beschreibung 6", price: 60, image: "https://via.placeholder.com/150" },
+    { id: 1, name: "Produkt 1", description: "Beschreibung 1", price: 100, image: "https://via.placeholder.com/150" },
+    { id: 2, name: "Produkt 2", description: "Beschreibung 2", price: 200, image: "https://via.placeholder.com/150" },
+    { id: 3, name: "Produkt 3", description: "Beschreibung 3", price: 300, image: "https://via.placeholder.com/150" },
+    { id: 4, name: "Produkt 4", description: "Beschreibung 4", price: 400, image: "https://via.placeholder.com/150" },
+    { id: 5, name: "Produkt 5", description: "Beschreibung 5", price: 500, image: "https://via.placeholder.com/150" }
   ];
 
   return (
-    <main className="homeMain">
-      <div className="mainContainer">
-        <div className="itemFilter">
-          <Filter title="Hersteller" options={['Hersteller 1', 'Hersteller 2', 'Hersteller 3', 'Hersteller 4']} />
-          <Filter title="Preis" options={['0 - 20', '20 - 50', '50 - 100', '100 - 200']} />
-          <Filter title="Farbe" options={['Rot', 'Blau', 'Grün', 'Schwarz']} />
-          <Filter title="Speicher" options={['64GB', '128GB', '256GB', '512GB']} />
+    <>
+      <main>
+        <div className="mainContainer">
+          <div className="itemFilter">
+            <Filter title="Preis" options={["0-50", "50-100", "100-150", "150-300", "300-500"]} />
+            <Filter title="Hersteller" options={["Hersteller 1", "Hersteller 2", "Hersteller 3"]} />
+          </div>
+          <div className="itemContainer">
+            {dummyItems.map((item) => (
+              <Item key={item.id} item={item} />
+            ))}
+          </div>
         </div>
-        <div className="items">
-          {dummyItems.map(item => (
-            <Item key={item.id} item={item} />
-          ))}
-        </div>
-      </div>
-    </main>
+      </main>
+    </>
   );
 };
 
 function Home1() {
   return (
     <>
-      <Header site={"Startseite"} />
+      <Header site={"Home1"} />
       <Nav />
       <Main />
       <Footer />
@@ -69,7 +69,3 @@ function Home1() {
 }
 
 export default Home1;
-
-
-
-

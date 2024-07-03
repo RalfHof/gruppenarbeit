@@ -21,11 +21,11 @@ const Item = ({ item }) => (
 const Filter = ({ title, options }) => (
   <div className="filter">
     <p>{title}</p>
-    <select>
+    <div className="filter-options">
       {options.map((option, index) => (
-        <option key={index}>{option}</option>
+        <button key={index} className="filter-button">{option}</button>
       ))}
-    </select>
+    </div>
   </div>
 );
 
@@ -52,6 +52,7 @@ const Main = () => {
         <h2>Filter</h2>
         <Filter title="Hersteller" options={["Apple", "Samsung", "Nokia", "Huawei"]} />
         <Filter title="Preis" options={["0 - 500", "500 - 1000", "1000 - 1500", "1500 - 2000"]} />
+        <Filter title="Technische Details" options={["OS: Android", "Display-Größe: 5 - 6 Zoll", "Konnektivität: 5G"]} />
       </div>
       <div className="content">
         <h2>Smartphones</h2>
@@ -75,4 +76,8 @@ const Smartphones = () => (
 );
 
 export default Smartphones;
+
+
+
+
 

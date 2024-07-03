@@ -11,29 +11,19 @@ const categories = [
 
 const manufacturers = ["Hersteller 1", "Hersteller 2", "Hersteller 3", "Hersteller 4"];
 
-const Filter = ({ title, options }) => (
-  <div className="filter">
-    <p>{title}</p>
-    <select>
-      {options.map((option, index) => (
-        <option key={index}>{option}</option>
-      ))}
-    </select>
-  </div>
-);
+const products = [
+  { name: "Produkt 1", description: "Beschreibung 1", price: "100€", image: "https://via.placeholder.com/150", link: "#" },
+  { name: "Produkt 2", description: "Beschreibung 2", price: "200€", image: "https://via.placeholder.com/150", link: "#" },
+  { name: "Produkt 3", description: "Beschreibung 3", price: "300€", image: "https://via.placeholder.com/150", link: "#" },
+  { name: "Produkt 4", description: "Beschreibung 4", price: "400€", image: "https://via.placeholder.com/150", link: "#" },
+  { name: "Produkt 5", description: "Beschreibung 5", price: "500€", image: "https://via.placeholder.com/150", link: "#" }
+];
 
 const Main = () => {
   return (
     <>
       <main className="homeMain">
         <div className="mainContainer">
-          <div className="itemFilter">
-            <h2>Filter</h2>
-            <Filter title="Hersteller" options={manufacturers} />
-            <Filter title="Preis" options={['0 - 20', '20 - 50', '50 - 100', '100 - 200']} />
-            <Filter title="Farbe" options={['Schwarz', 'Weiß', 'Rot', 'Blau']} />
-            <Filter title="Speicher" options={['8GB', '16GB', '32GB', '64GB']} />
-          </div>
           <div className="shardContainer">
             <div className="shardRow">
               {categories.map((category, index) => (
@@ -61,6 +51,18 @@ const Main = () => {
         <div className="spacer">
           <h2>Häufig gekauft:</h2>
         </div>
+        <div className="productContainer">
+          {products.map((product, index) => (
+            <div key={index} className="itemCard">
+              <div className="itemContainer">
+                <img className="itemImage" src={product.image} alt={product.name} />
+                <div className="itemDescription">{product.description}</div>
+                <div className="itemPrice">{product.price}</div>
+                <button className="cart-button">In den Warenkorb</button>
+              </div>
+            </div>
+          ))}
+        </div>
       </main>
     </>
   );
@@ -78,6 +80,12 @@ function Home() {
 }
 
 export default Home;
+
+
+
+
+
+
 
 
 

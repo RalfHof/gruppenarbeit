@@ -1,0 +1,126 @@
+/* ... deine bestehenden Stile ... */
+
+/* Product Page Styles */
+.productMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .productContainer {
+    display: flex;
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  
+  .productDetails {
+    flex: 2;
+  }
+  
+  .productPurchase {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .productImageContainer {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+  }
+  
+  .productImage {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  .thumbnailContainer {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+  }
+  
+  .thumbnail {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+  }
+  
+  .recommendedCombos {
+    margin: 20px 0;
+  }
+  
+  .recommendedItem {
+    display: flex;
+  }
+  
+  .recommendedImageContainer {
+    margin-right: 10px;
+  }
+  
+  .recommendedImage {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  
+  .productPurchase h1 {
+    margin: 20px 0;
+  }
+  
+  .productOptions {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .productOption {
+    margin-bottom: 10px;
+  }
+  
+  .optionContainer {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .optionButton {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f2f2f2;
+  }
+  
+  .optionButton:hover {
+    background-color: #ddd;
+  }
+  
+  .infoSection {
+    width: 100%;
+    margin: 10px 0;
+  }
+  
+  .infoButton {
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    background-color: #f2f2f2;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .infoContent {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-top: none;
+    display: none;
+  }
+  
+  /* Display content when button is clicked */
+  .infoButton.active + .infoContent {
+    display: block;
+  }
+  

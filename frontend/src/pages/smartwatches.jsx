@@ -21,11 +21,11 @@ const Item = ({ item }) => (
 const Filter = ({ title, options }) => (
   <div className="filter">
     <p>{title}</p>
-    <select>
+    <div className="filter-options">
       {options.map((option, index) => (
-        <option key={index}>{option}</option>
+        <button key={index} className="filter-button">{option}</button>
       ))}
-    </select>
+    </div>
   </div>
 );
 
@@ -50,10 +50,9 @@ const Main = () => {
     <main className="mainContainer">
       <div className="itemFilter">
         <h2>Filter</h2>
-        <Filter title="Hersteller" options={['Apple', 'Samsung', 'Fitbit', 'Garmin', 'Google Pixel Watch 2', 'XPLORA Kids Watch X6 Play'
-      
-        ]} />
+        <Filter title="Hersteller" options={['Apple', 'Samsung', 'Fitbit', 'Garmin', 'Google Pixel Watch 2', 'XPLORA Kids Watch X6 Play']} />
         <Filter title="Preis" options={['0 - 100', '100 - 200', '200 - 300', '300 - 800']} />
+        <Filter title="Technische Details" options={['Typ: Smartwatch', 'OS: watchOS', 'Display-Größe: 41mm oder 45mm', 'Konnektivität: GPS + Cellular']} />
       </div>
       <div className="content">
         <h2>Smartwatches</h2>
@@ -77,6 +76,7 @@ const Smartwatches = () => (
 );
 
 export default Smartwatches;
+
 
 
 

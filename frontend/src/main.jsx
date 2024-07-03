@@ -8,8 +8,10 @@ import Smartwatches from './pages/smartwatches.jsx';
 import Smartphones from './pages/smartphones.jsx';
 import Accessories from './pages/accessories.jsx';
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+
   <Router>
     <Routes>
       <Route path="/" element={<Home />} />
@@ -17,6 +19,7 @@ root.render(
       <Route path="/smartwatches" element={<Smartwatches />} />
       <Route path="/smartphones" element={<Smartphones />} />
       <Route path="/accessories" element={<Accessories />} />
+      
     </Routes>
   </Router>
 );
