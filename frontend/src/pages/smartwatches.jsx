@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Header from "../components/header";
 import Nav from "../components/nav";
 import Footer from "../components/footer";
+import { formatPrice } from "../utils";
 import "../styles.css";
 
 const Item = ({ item }) => (
@@ -12,7 +13,7 @@ const Item = ({ item }) => (
     </div>
     <div className="descriptionContainer">
       <p className="itemDescription">{item.description}</p>
-      <p className="itemPrice">{item.price}€</p>
+      <p className="itemPrice">{formatPrice(item.price)}</p> {/* Formatiere den Preis */}
       <button className="cart-button">In den Warenkorb</button>
     </div>
   </div>
@@ -76,6 +77,7 @@ const Smartwatches = () => (
 );
 
 export default Smartwatches;
+
 
 
 

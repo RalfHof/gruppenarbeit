@@ -5,26 +5,68 @@ const bodyParser = require('body-parser');
 const PORT = 5000;
 
 const app = express();
-
-app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-const readFileAndSendResponse = async (filePath, res) => {
+app.use(cors());
+
+app.get("/smartphones", async (req, res) => {
   try {
-    const data = await fs.readFile(filePath, "utf8");
-    res.status(200).json(JSON.parse(data));
+    const smartphones = await fs.readFile("smartphones.json", "utf8"); //Speicherung in Variable, um Zustand zu wahren
+    const parsedSmartphones = JSON.parse(smartphones); //Zerlegung des JSON Format in JavaScript Objecte
+    res.status(200).json(parsedSmartphones);
   } catch (error) {
-    console.error(`Fehler beim Auslesen der Datei ${filePath}`, error);
+    console.error("Fehler beim auslesen", error);
     res.status(500).json(error);
   }
-};
+});
 
+app.get("/product", async (req, res) => {
+  try {
+    const product = await fs.readFile("product.json", "utf8"); //Speicherung in Variable, um Zustand zu wahren
+    const parsedSmartphones = JSON.parse(product); //Zerlegung des JSON Format in JavaScript Objecte
+    res.status(200).json(parsedproduct);
+  } catch (error) {
+    console.error("Fehler beim auslesen", error);
+    res.status(500).json(error);
+  }
+});
 
+app.get("/smartwatches", async (req, res) => {
+  try {
+    const smartwatches = await fs.readFile("smartwatches.json", "utf8");
+    const parsedSmartwatches = JSON.parse(smartwatches);
+    res.status(200).json(parsedSmartwatches);
+  } catch {
+    console.error("Fehler beim auslesen", error);
+    res.status(500).json(error);
+  }
+});
 
-app.get("/smartphones", (req, res) => readFileAndSendResponse("smartphones.json", res));
-app.get("/smartwatches", (req, res) => readFileAndSendResponse("smartwatches.json", res));
+app.get("/customer", async (req, res) => {
+  try {
+    const customer = await fs.readFile("customer.json", "utf8");
+    const parsedCustomer = JSON.parse(customer);
+    res.status(200).json(parsedCustomer);
+  } catch (error) {
+    console.error("Fehler beim auslesen", error);
+    res.status(500).json(error);
+  }
+});
+
+app.get("/orders", async (req, res) => {
+  try {
+    const customer = await fs.readFile("orders.json", "utf8");
+    const parsedCustomer = JSON.parse(customer);
+    res.status(200).json(parsedCustomer);
+  } catch (error) {
+    console.error("Fehler beim auslesen", error);
+    res.status(500).json(error);
+  }
+});
 
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Server running on port  http://localhost:${PORT}`);
 });
+
+app.get("/products", (req, res) => readFileAndSendResponse("products.json", res));

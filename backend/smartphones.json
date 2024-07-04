@@ -1,162 +1,202 @@
 [
-    {
+  {
+    "id": 1,
+    "name": "iPhone 14 Pro Max",
+    "manufacturer": "Apple",
+    "price": 1299,
+    "description": "lorem ipsum dolor sit amet, consectetur adipis occ tempor invid id vel   scelerisque",
+    "image": "https://www.zdnet.com/a/img/resize/e889f5ab7352d3b8a21ccf591d37c32342c36c4b/2024/02/02/fe353b53-8b16-494b-96e0-2d83788da0f2/dsc01662-enhanced-nr.jpg?auto=webp&fit=crop&height=360&width=640",
+    "technical-details": {
+      "type": "Smartphone",
+      "os": "iOS",
+      "cpu": "A15 Bionic Chip",
+      "storage": "256GB"
+    },
+    "comments": {
       "id": 1,
-      "name": "iPhone 14 Pro Max",
-      "manufacturer": "Apple",
-      "price": 1299,
-      "description": "lorem ipsum dolor sit amet, consectetur adipis occ tempor invid id vel   scelerisque",
-      "image": "https://www.zdnet.com/a/img/resize/e889f5ab7352d3b8a21ccf591d37c32342c36c4b/2024/02/02/fe353b53-8b16-494b-96e0-2d83788da0f2/dsc01662-enhanced-nr.jpg?auto=webp&fit=crop&height=360&width=640"
-    },
-    {
-      "id": 2,
-      "name": "Samsung Galaxy S23 Ultra",
-      "manufacturer": "Samsung",
-      "price": 1199,
-      "description": "lorem ipsum dolor sit amet, consectetur adipis occ tempor invid id vel   scelerisque",
-      "image": "https://www.zdnet.com/a/img/resize/e889f5ab7352d3b8a21ccf591d37c32342c36c4b/2024/02/02/fe353b53-8b16-494b-96e0-2d83788da0f2/dsc01662-enhanced-nr.jpg?auto=webp&fit=crop&height=360&width=640"
-    },
-    {
-      "id": 3,
-      "name": "Google Pixel 7 Pro",
-      "manufacturer": "Google",
-      "price": 899,
-      "description": "lorem ipsum dolor sit amet, consectetur adipis occ tempor invid id vel   scelerisque",
-      "image": "https://www.zdnet.com/a/img/resize/e889f5ab7352d3b8a21ccf591d37c32342c36c4b/2024/02/02/fe353b53-8b16-494b-96e0-2d83788da0f2/dsc01662-enhanced-nr.jpg?auto=webp&fit=crop&height=360&width=640"
-    },
-    {
-      "id": 4,
-      "name": "Xiaomi 13 Pro",
-      "manufacturer": "Xiaomi",
-      "price": 999,
-      "description": "lorem ipsum dolor sit amet, consectetur adipis occ tempor invid id vel   scelerisque",
-      "image": "https://www.zdnet.com/a/img/resize/e889f5ab7352d3b8a21ccf591d37c32342c36c4b/2024/02/02/fe353b53-8b16-494b-96e0-2d83788da0f2/dsc01662-enhanced-nr.jpg?auto=webp&fit=crop&height=360&width=640"
-    },
-    {
-      "id": 5,
-      "name": "OnePlus 11",
-      "manufacturer": "OnePlus",
-      "price": 829,
-      "description": "lorem ipsum dolor sit amet, consectetur adipis occ tempor invid id vel   scelerisque",
-      "image": "https://www.zdnet.com/a/img/resize/e889f5ab7352d3b8a21ccf591d37c32342c36c4b/2024/02/02/fe353b53-8b16-494b-96e0-2d83788da0f2/dsc01662-enhanced-nr.jpg?auto=webp&fit=crop&height=360&width=640"
-    },
-    {
-      "id": 6,
-      "name": "Oppo Find X5 Pro",
-      "manufacturer": "Oppo",
-      "price": 1299,
-      "description": "lorem ipsum dolor sit amet, consectetur adipis occ tempor invid id vel   scelerisque",
-      "image": "https://www.zdnet.com/a/img/resize/e889f5ab7352d3b8a21ccf591d37c32342c36c4b/2024/02/02/fe353b53-8b16-494b-96e0-2d83788da0f2/dsc01662-enhanced-nr.jpg?auto=webp&fit=crop&height=360&width=640"
-    },
-    {
-      "id": 7,
-      "name": "Motorola Edge 30 Pro",
-      "manufacturer": "Motorola",
-      "price": 799,
-      "description": "lorem ipsum dolor sit amet, consectetur adipis occ tempor invid id vel   scelerisque",
-      "image": "https://www.zdnet.com/a/img/resize/e889f5ab7352d3b8a21ccf591d37c32342c36c4b/2024/02/02/fe353b53-8b16-494b-96e0-2d83788da0f2/dsc01662-enhanced-nr.jpg?auto=webp&fit=crop&height=360&width=640"
-    },
-    {
-      "id": 8,
-      "name": "Sony Xperia 1 IV",
-      "manufacturer": "Sony",
-      "price": 1399,
-      "description": "lorem ipsum dolor sit amet, consectetur adipis occ tempor invid id vel   scelerisque",
-      "image": "https://www.zdnet.com/a/img/resize/e889f5ab7352d3b8a21ccf591d37c32342c36c4b/2024/02/02/fe353b53-8b16-494b-96e0-2d83788da0f2/dsc01662-enhanced-nr.jpg?auto=webp&fit=crop&height=360&width=640"
-    },
-    {
-      "id": 9,
-      "name": "Huawei P50 Pro",
-      "manufacturer": "Huawei",
-      "price": 1199,
-      "description": "lorem ipsum dolor sit amet, consectetur adipis occ tempor invid id vel   scelerisque",
-      "image": "https://www.zdnet.com/a/img/resize/e889f5ab7352d3b8a21ccf591d37c32342c36c4b/2024/02/02/fe353b53-8b16-494b-96e0-2d83788da0f2/dsc01662-enhanced-nr.jpg?auto=webp&fit=crop&height=360&width=640"
-    },
-    {
-      "id": 10,
-      "name": "iPhone 13",
-      "manufacturer": "Apple",
-      "price": 899,
-      "description": "lorem ipsum dolor sit amet, consectetur adipis occ tempor invid id vel   scelerisque",
-      "image": "https://www.zdnet.com/a/img/resize/e889f5ab7352d3b8a21ccf591d37c32342c36c4b/2024/02/02/fe353b53-8b16-494b-96e0-2d83788da0f2/dsc01662-enhanced-nr.jpg?auto=webp&fit=crop&height=360&width=640"
-    },
-    {
-      "id": 11,
-      "name": "Samsung Galaxy Z Fold4",
-      "manufacturer": "Samsung",
-      "price": 1799,
-      "description": "lorem ipsum dolor sit amet, consectetur adipis occ tempor invid id vel   scelerisque",
-      "image": "https://www.zdnet.com/a/img/resize/e889f5ab7352d3b8a21ccf591d37c32342c36c4b/2024/02/02/fe353b53-8b16-494b-96e0-2d83788da0f2/dsc01662-enhanced-nr.jpg?auto=webp&fit=crop&height=360&width=640"
-    },
-    {
-      "id": 12,
-      "name": "Nothing Phone (1)",
-      "manufacturer": "Nothing",
-      "price": 469,
-      "description": "lorem ipsum dolor sit amet, consectetur adipis occ tempor invid id vel   scelerisque",
-      "image": "https://www.zdnet.com/a/img/resize/e889f5ab7352d3b8a21ccf591d37c32342c36c4b/2024/02/02/fe353b53-8b16-494b-96e0-2d83788da0f2/dsc01662-enhanced-nr.jpg?auto=webp&fit=crop&height=360&width=640"
-    },
-    {
-      "id": 13,
-      "name": "Asus ROG Phone 6",
-      "manufacturer": "Asus",
-      "price": 999,
-      "description": "lorem ipsum dolor sit amet, consectetur adipis occ tempor invid id vel   scelerisque",
-      "image": "https://www.zdnet.com/a/img/resize/e889f5ab7352d3b8a21ccf591d37c32342c36c4b/2024/02/02/fe353b53-8b16-494b-96e0-2d83788da0f2/dsc01662-enhanced-nr.jpg?auto=webp&fit=crop&height=360&width=640"
-    },
-    {
-      "id": 14,
-      "name": "Realme GT 2 Pro",
-      "manufacturer": "Realme",
-      "price": 749,
-      "description": "lorem ipsum dolor sit amet, consectetur adipis occ tempor invid id vel   scelerisque",
-      "image": "https://www.zdnet.com/a/img/resize/e889f5ab7352d3b8a21ccf591d37c32342c36c4b/2024/02/02/fe353b53-8b16-494b-96e0-2d83788da0f2/dsc01662-enhanced-nr.jpg?auto=webp&fit=crop&height=360&width=640"
-    },
-    {
-      "id": 15,
-      "name": "Vivo X80 Pro",
-      "manufacturer": "Vivo",
-      "price": 1199,
-      "description": "lorem ipsum dolor sit amet, consectetur adipis occ tempor invid id vel   scelerisque",
-      "image": "https://www.zdnet.com/a/img/resize/e889f5ab7352d3b8a21ccf591d37c32342c36c4b/2024/02/02/fe353b53-8b16-494b-96e0-2d83788da0f2/dsc01662-enhanced-nr.jpg?auto=webp&fit=crop&height=360&width=640"
-    },
-    {
-      "id": 16,
-      "name": "iPhone SE (2022)",
-      "manufacturer": "Apple",
-      "price": 479,
-      "description": "lorem ipsum dolor sit amet, consectetur adipis occ tempor invid id vel   scelerisque",
-      "image": "https://www.zdnet.com/a/img/resize/e889f5ab7352d3b8a21ccf591d37c32342c36c4b/2024/02/02/fe353b53-8b16-494b-96e0-2d83788da0f2/dsc01662-enhanced-nr.jpg?auto=webp&fit=crop&height=360&width=640"
-    },
-    {
-      "id": 17,
-      "name": "Samsung Galaxy A53 5G",
-      "manufacturer": "Samsung",
-      "price": 449,
-      "description": "lorem ipsum dolor sit amet, consectetur adipis occ tempor invid id vel   scelerisque",
-      "image": "https://www.zdnet.com/a/img/resize/e889f5ab7352d3b8a21ccf591d37c32342c36c4b/2024/02/02/fe353b53-8b16-494b-96e0-2d83788da0f2/dsc01662-enhanced-nr.jpg?auto=webp&fit=crop&height=360&width=640"
-    },
-    {
-      "id": 18,
-      "name": "Google Pixel 6a",
-      "manufacturer": "Google",
-      "price": 449,
-      "description": "lorem ipsum dolor sit amet, consectetur adipis occ tempor invid id vel   scelerisque",
-      "image": "https://www.zdnet.com/a/img/resize/e889f5ab7352d3b8a21ccf591d37c32342c36c4b/2024/02/02/fe353b53-8b16-494b-96e0-2d83788da0f2/dsc01662-enhanced-nr.jpg?auto=webp&fit=crop&height=360&width=640"
-    },
-    {
-      "id": 19,
-      "name": "Xiaomi Redmi Note 11 Pro",
-      "manufacturer": "Xiaomi",
-      "price": 299,
-      "description": "lorem ipsum dolor sit amet, consectetur adipis occ tempor invid id vel   scelerisque",
-      "image": "https://www.zdnet.com/a/img/resize/e889f5ab7352d3b8a21ccf591d37c32342c36c4b/2024/02/02/fe353b53-8b16-494b-96e0-2d83788da0f2/dsc01662-enhanced-nr.jpg?auto=webp&fit=crop&height=360&width=640"
-    },
-    {
-      "id": 20,
-      "name": "Fairphone 4",
-      "manufacturer": "Fairphone",
-      "price": 579,
-      "description": "lorem ipsum dolor sit amet, consectetur adipis occ tempor invid id vel   scelerisque",
-      "image": "https://www.zdnet.com/a/img/resize/e889f5ab7352d3b8a21ccf591d37c32342c36c4b/2024/02/02/fe353b53-8b16-494b-96e0-2d83788da0f2/dsc01662-enhanced-nr.jpg?auto=webp&fit=crop&height=360&width=640"
+      "author": "JohnDoe",
+      "text": "This phone is amazing!",
+      "rating": 5
     }
-  ]
+  },
+  {
+    "id": 2,
+    "name": "Samsung Galaxy S23 Ultra",
+    "manufacturer": "Samsung",
+    "price": 1199,
+    "description": "Das ultimative Smartphone-Erlebnis mit leistungsstarker Kamera und großem Display.",
+    "image": "https://images.samsung.com/de/smartphones/galaxy-s23-ultra/buy/S23_Ultra_ProductKV_Black_PC.jpg",
+    "technical-details": {
+      "type": "Smartphone",
+      "os": "Android",
+      "cpu": "Snapdragon 8 Gen 2",
+      "storage": "256GB"
+    },
+    "comments": {
+      "id": 1,
+      "author": "TechFan2024",
+      "text": "Die Kamera ist der Wahnsinn!",
+      "rating": 5
+    }
+  },
+  {
+    "id": 3,
+    "name": "Google Pixel 7 Pro",
+    "manufacturer": "Google",
+    "price": 899,
+    "description": "Pure Android-Erfahrung mit beeindruckender Kamera und cleveren Software-Features.",
+    "image": "https://store.google.com/de/product/pixel_7_pro_snow",
+    "technical-details": {
+      "type": "Smartphone",
+      "os": "Android",
+      "cpu": "Google Tensor G2",
+      "storage": "128GB"
+    },
+    "comments": {
+      "id": 1,
+      "author": "AndroidEnthusiast",
+      "text": "Das beste Android-Handy auf dem Markt!",
+      "rating": 4
+    }
+  },
+  {
+    "id": 4,
+    "name": "Xiaomi 13 Pro",
+    "manufacturer": "Xiaomi",
+    "price": 999,
+    "description": "High-End-Leistung zum fairen Preis mit schnellem Laden und vielseitiger Kamera.",
+    "image": "https://i01.appmifile.com/webfile/globalimg/products/pc/xiaomi-13-pro/section01.jpg",
+    "technical-details": {
+      "type": "Smartphone",
+      "os": "Android",
+      "cpu": "Snapdragon 8 Gen 2",
+      "storage": "256GB"
+    },
+    "comments": {
+      "id": 1,
+      "author": "PreisLeistungsFreak",
+      "text": "Unglaublich viel für das Geld!",
+      "rating": 5
+    }
+  },
+  {
+    "id": 5,
+    "name": "OnePlus 11",
+    "manufacturer": "OnePlus",
+    "price": 849,
+    "description": "Schnelles und flüssiges Smartphone-Erlebnis mit einzigartigem Design und schnellem Laden.",
+    "image": "https://image01.oneplus.net/shop/202301/04/1-MKT-230104-11-kv-d.png",
+    "technical-details": {
+      "type": "Smartphone",
+      "os": "Android",
+      "cpu": "Snapdragon 8 Gen 2",
+      "storage": "256GB"
+    },
+    "comments": {
+      "id": 1,
+      "author": "SpeedDemon",
+      "text": "Das schnellste Handy, das ich je hatte!",
+      "rating": 5
+    }
+  },
+  {
+    "id": 6,
+    "name": "Sony Xperia 1 V",
+    "manufacturer": "Sony",
+    "price": 1399,
+    "description": "Für Foto- und Video-Enthusiasten: Einzigartiges 4K-Display und professionelle Kamerafunktionen.",
+    "image": "https://www.sony.de/image/d41978cc64106c84bd461228882b89a6?fmt=pjpeg&wid=330&bgcolor=FFFFFF&bgc=FFFFFF",
+    "technical-details": {
+      "type": "Smartphone",
+      "os": "Android",
+      "cpu": "Snapdragon 8 Gen 2",
+      "storage": "256GB"
+    },
+    "comments": {
+      "id": 1,
+      "author": "FilmmakerPro",
+      "text": "Perfekt für meine Filmprojekte!",
+      "rating": 4
+    }
+  },
+  {
+    "id": 7,
+    "name": "Nothing Phone (2)",
+    "manufacturer": "Nothing",
+    "price": 599,
+    "description": "Auffälliges Design mit transparenter Rückseite und einzigartigem Glyph-Interface.",
+    "image": "https://consumer.nothing.tech/api/v1/file/download/NT001-Black-Front-Grid-Left-1600x1600.png",
+    "technical-details": {
+      "type": "Smartphone",
+      "os": "Android",
+      "cpu": "Snapdragon 8+ Gen 1",
+      "storage": "256GB"
+    },
+    "comments": {
+      "id": 1,
+      "author": "StyleGuru",
+      "text": "Ein echter Hingucker!",
+      "rating": 5
+    }
+  },
+  {
+    "id": 8,
+    "name": "Motorola Edge 40 Pro",
+    "manufacturer": "Motorola",
+    "price": 899,
+    "description": "Leistungsstarkes Smartphone mit 200 MP Kamera und ultraschnellem Laden.",
+    "image": "https://www.motorola.de/content/dam/moto/row/product_assets/edge-family/edge-30-ultra/global/images/moto-edge-30-ultra-pdp-render-interstellar-black-front-01.png",
+    "technical-details": {
+      "type": "Smartphone",
+      "os": "Android",
+      "cpu": "Snapdragon 8 Gen 2",
+      "storage": "256GB"
+    },
+    "comments": {
+      "id": 1,
+      "author": "FotoFanatiker",
+      "text": "Die 200 MP Kamera ist unglaublich!",
+      "rating": 4
+    }
+  },
+  {
+    "id": 9,
+    "name": "Asus ROG Phone 7",
+    "manufacturer": "Asus",
+    "price": 1099,
+    "description": "Das ultimative Gaming-Smartphone mit leistungsstarkem Prozessor und speziellen Gaming-Features.",
+    "image": "https://dlcdnwebimgs.asus.com/gain/9A5A479C-56D2-42C4-A785-061F969645B7/w1920/h1080",
+    "technical-details": {
+      "type": "Smartphone",
+      "os": "Android",
+      "cpu": "Snapdragon 8 Gen 2",
+      "storage": "512GB"
+    },
+    "comments": {
+      "id": 1,
+      "author": "GamerGirl",
+      "text": "Das beste Handy für Mobile Gaming!",
+      "rating": 5
+    }
+  },
+  {
+    "id": 10,
+    "name": "Fairphone 5",
+    "manufacturer": "Fairphone",
+    "price": 699,
+    "description": "Nachhaltiges und modulares Smartphone mit Fokus auf faire Produktion und lange Lebensdauer.",
+    "image": "https://cdn.fairphone.com/wp-content/uploads/2021/09/Fairphone-4-Speckled-Green-Front.png",
+    "technical-details": {
+      "type": "Smartphone",
+      "os": "Android",
+      "cpu": "Qualcomm QCM6490",
+      "storage": "256GB"
+    },
+    "comments": {
+      "id": 1,
+      "author": "Umweltbewusst",
+      "text": "Endlich ein Smartphone mit gutem Gewissen!",
+      "rating": 4
+    }
+  }
+]

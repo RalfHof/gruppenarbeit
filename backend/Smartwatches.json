@@ -1,142 +1,202 @@
 [
-    {
+  {
+    "id": 1,
+    "name": "Apple Watch Series 9",
+    "manufacturer": "Apple",
+    "price": 449,
+    "description": "Die fortschrittlichste Apple Watch mit neuen Gesundheitsfunktionen und schnellerem Prozessor.",
+    "image": "https://www.apple.com/v/apple-watch-series-9/b/images/overview/hero/hero_s9_hardware__djj0xyk06laa_large.jpg",
+    "technical-details": {
+      "type": "Smartwatch",
+      "os": "watchOS",
+      "display-size": "41mm oder 45mm",
+      "connectivity": "GPS + Cellular"
+    },
+    "comments": {
       "id": 1,
-      "name": "Apple Watch Series 8",
-      "manufacturer": "Apple",
-      "price": 419,
-      "image": "https://cdn.pixabay.com/photo/2017/02/15/11/05/macbook-2068251_960_720.jpg"
-    },
-    {
-      "id": 2,
-      "name": "Samsung Galaxy Watch 5 Pro",
-      "manufacturer": "Samsung",
-      "price": 449,
-      "image": "https://cdn.pixabay.com/photo/2017/03/27/19/27/samsung-2179413_960_720.jpg"
-    },
-    {
-      "id": 3,
-      "name": "Google Pixel Watch",
-      "manufacturer": "Google",
-      "price": 349,
-      "image": "https://cdn.pixabay.com/photo/2015/01/08/18/27/startup-593327_960_720.jpg"
-    },
-    {
-      "id": 4,
-      "name": "Garmin fenix 7",
-      "manufacturer": "Garmin",
-      "price": 699,
-      "image": "https://cdn.pixabay.com/photo/2017/07/31/11/21/people-2557396_960_720.jpg"
-    },
-    {
-      "id": 5,
-      "name": "Fitbit Sense 2",
-      "manufacturer": "Fitbit",
-      "price": 299,
-      "image": "https://cdn.pixabay.com/photo/2015/02/02/11/09/office-620822_960_720.jpg"
-    },
-    {
-      "id": 6,
-      "name": "Amazfit GTR 4",
-      "manufacturer": "Amazfit",
-      "price": 199,
-      "image": "https://cdn.pixabay.com/photo/2015/01/08/18/26/man-593329_960_720.jpg"
-    },
-    {
-      "id": 7,
-      "name": "Fossil Gen 6",
-      "manufacturer": "Fossil",
-      "price": 299,
-      "image": "https://cdn.pixabay.com/photo/2016/11/29/05/38/beach-1867701_960_720.jpg"
-    },
-    {
-      "id": 8,
-      "name": "Polar Pacer Pro",
-      "manufacturer": "Polar",
-      "price": 299,
-      "image": "https://cdn.pixabay.com/photo/2014/05/02/21/49/laptop-336373_960_720.jpg"
-    },
-    {
-      "id": 9,
-      "name": "TicWatch Pro 3 Ultra",
-      "manufacturer": "Mobvoi",
-      "price": 299,
-      "image": "https://cdn.pixabay.com/photo/2015/01/20/11/09/ipad-603424_960_720.jpg"
-    },
-    {
-      "id": 10,
-      "name": "Samsung Galaxy Watch 4 Classic",
-      "manufacturer": "Samsung",
-      "price": 369,
-      "image": "https://cdn.pixabay.com/photo/2017/03/27/13/38/android-2178526_960_720.jpg"
-    },
-    {
-      "id": 11,
-      "name": "Apple Watch SE (2nd Gen)",
-      "manufacturer": "Apple",
-      "price": 299,
-      "image": "https://cdn.pixabay.com/photo/2015/09/09/16/05/forest-931706_960_720.jpg"
-    },
-    {
-      "id": 12,
-      "name": "Garmin Venu 2 Plus",
-      "manufacturer": "Garmin",
-      "price": 449,
-      "image": "https://cdn.pixabay.com/photo/2017/06/13/12/53/policeman-2398775_960_720.jpg"
-    },
-    {
-      "id": 13,
-      "name": "Fitbit Charge 5",
-      "manufacturer": "Fitbit",
-      "price": 179,
-      "image": "https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_960_720.jpg"
-    },
-    {
-      "id": 14,
-      "name": "Amazfit Bip 3 Pro",
-      "manufacturer": "Amazfit",
-      "price": 69,
-      "image": "https://cdn.pixabay.com/photo/2013/07/18/20/26/sea-164989_960_720.jpg"
-    },
-    {
-      "id": 15,
-      "name": "Huawei Watch GT 3 Pro",
-      "manufacturer": "Huawei",
-      "price": 329,
-      "image": "https://cdn.pixabay.com/photo/2017/05/19/14/55/educational-2325791_960_720.jpg"
-    },
-    {
-      "id": 16,
-      "name": "Fossil Gen 5 LTE",
-      "manufacturer": "Fossil",
-      "price": 249,
-      "image": "https://cdn.pixabay.com/photo/2015/01/08/18/25/desk-593328_960_720.jpg"
-    },
-    {
-      "id": 17,
-      "name": "Mobvoi TicWatch E3",
-      "manufacturer": "Mobvoi",
-      "price": 199,
-      "image": "https://cdn.pixabay.com/photo/2016/11/19/15/31/notebook-1840639_960_720.jpg"
-    },
-    {
-      "id": 18,
-      "name": "Coros Pace 2",
-      "manufacturer": "Coros",
-      "price": 199,
-      "image": "https://cdn.pixabay.com/photo/2014/05/03/01/03/laptop-336704_960_720.jpg"
-    },
-    {
-      "id": 19,
-      "name": "Samsung Galaxy Watch Active2",
-      "manufacturer": "Samsung",
-      "price": 269,
-      "image": "https://cdn.pixabay.com/photo/2017/02/19/15/31/monitor-2081153_960_720.jpg"
-    },
-    {
-      "id": 20,
-      "name": "Fitbit Versa 3",
-      "manufacturer": "Fitbit",
-      "price": 229,
-      "image": "https://cdn.pixabay.com/photo/2015/05/26/09/37/macbook-784706_960_720.jpg"
+      "author": "iLover",
+      "text": "Die EKG-Funktion ist super!",
+      "rating": 4
     }
-  ]
+  },
+  {
+    "id": 2,
+    "name": "Samsung Galaxy Watch 6 Classic",
+    "manufacturer": "Samsung",
+    "price": 399,
+    "description": "Elegante Smartwatch mit drehbarer Lünette und umfassenden Fitness-Tracking.",
+    "image": "https://images.samsung.com/de/wearables/galaxy-watch/galaxy-watch6-classic/buy/GW6C_KV_Silver_PC.jpg",
+    "technical-details": {
+      "type": "Smartwatch",
+      "os": "Wear OS",
+      "display-size": "43mm oder 47mm",
+      "connectivity": "Bluetooth/Wi-Fi"
+    },
+    "comments": {
+      "id": 1,
+      "author": "FitFreak",
+      "text": "Der Akku hält ewig!",
+      "rating": 5
+    }
+  },
+  {
+    "id": 3,
+    "name": "Garmin fenix 7",
+    "manufacturer": "Garmin",
+    "price": 699,
+    "description": "Outdoor-Smartwatch mit GPS, Karten und umfangreichen Sportfunktionen.",
+    "image": "https://www.garmin.com/de-DE/p/791646/gallery/791647",
+    "technical-details": {
+      "type": "Smartwatch",
+      "os": "Garmin OS",
+      "display-size": "47mm",
+      "connectivity": "Multi-GNSS, Bluetooth, Wi-Fi"
+    },
+    "comments": {
+      "id": 1,
+      "author": "OutdoorEnthusiast",
+      "text": "Perfekt für meine Abenteuer!",
+      "rating": 5
+    }
+  },
+  {
+    "id": 4,
+    "name": "Fitbit Sense 2",
+    "manufacturer": "Fitbit",
+    "price": 299,
+    "description": "Gesundheits- und Fitness-Smartwatch mit Stressmanagement und EDA-Scan.",
+    "image": "https://www.fitbit.com/global/de/products/smartwatches/sense2.png",
+    "technical-details": {
+      "type": "Smartwatch",
+      "os": "Fitbit OS",
+      "display-size": "40.48mm",
+      "connectivity": "Bluetooth, Wi-Fi"
+    },
+    "comments": {
+      "id": 1,
+      "author": "WellnessGuru",
+      "text": "Hilft mir, Stress abzubauen.",
+      "rating": 4
+    }
+  },
+  {
+    "id": 5,
+    "name": "Amazfit GTR 4",
+    "manufacturer": "Amazfit",
+    "price": 199,
+    "description": "Preisgünstige Smartwatch mit langer Akkulaufzeit und vielen Sportmodi.",
+    "image": "https://cdn.us.amazfit.com/media/catalog/product/cache/8564a120a2fd4d339f8257317140a9d2/g/t/gtr-4_product_page_graphite_black_01.png",
+    "technical-details": {
+      "type": "Smartwatch",
+      "os": "Zepp OS",
+      "display-size": "46mm",
+      "connectivity": "Bluetooth, Wi-Fi"
+    },
+    "comments": {
+      "id": 1,
+      "author": "BudgetShopper",
+      "text": "Top Preis-Leistungs-Verhältnis!",
+      "rating": 4
+    }
+  },
+  {
+    "id": 6,
+    "name": "Huawei Watch GT 3 Pro",
+    "manufacturer": "Huawei",
+    "price": 329,
+    "description": "Premium-Smartwatch mit EKG-Funktion und langer Akkulaufzeit.",
+    "image": "https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/wearables/watch-gt3-pro/list-img/watch-gt3-pro-black.png",
+    "technical-details": {
+      "type": "Smartwatch",
+      "os": "HarmonyOS",
+      "display-size": "46.6mm",
+      "connectivity": "Bluetooth, Wi-Fi"
+    },
+    "comments": {
+      "id": 1,
+      "author": "HuaweiFan",
+      "text": "Sieht edel aus und funktioniert super!",
+      "rating": 5
+    }
+  },
+  {
+    "id": 7,
+    "name": "Fossil Gen 6",
+    "manufacturer": "Fossil",
+    "price": 299,
+    "description": "Modische Smartwatch mit Wear OS und vielen Designs.",
+    "image": "https://www.fossil.com/on/demandware.static/-/Sites-fossil-master-catalog/default/dwa075505a/images/large/FTW4062_main.jpg",
+    "technical-details": {
+      "type": "Smartwatch",
+      "os": "Wear OS",
+      "display-size": "44mm",
+      "connectivity": "Bluetooth, Wi-Fi"
+    },
+    "comments": {
+      "id": 1,
+      "author": "Fashionista",
+      "text": "Passt perfekt zu meinem Outfit!",
+      "rating": 4
+    }
+  },
+  {
+    "id": 8,
+    "name": "Polar Pacer Pro",
+    "manufacturer": "Polar",
+    "price": 299,
+    "description": "Sportuhr mit GPS und detaillierten Trainingsanalysen.",
+    "image": "https://www.polar.com/de/on/demandware.static/-/Sites-polar-master-catalog/default/dw7296f4e4/images/large/900102856.01.1.jpg",
+    "technical-details": {
+      "type": "Smartwatch",
+      "os": "Polar OS",
+      "display-size": "45mm",
+      "connectivity": "GPS, Bluetooth"
+    },
+    "comments": {
+      "id": 1,
+      "author": "RunnerGirl",
+      "text": "Mein neuer Laufpartner!",
+      "rating": 5
+    }
+  },
+  {
+    "id": 9,
+    "name": "TicWatch Pro 5",
+    "manufacturer": "Mobvoi",
+    "price": 359,
+    "description": "Innovative Smartwatch mit dualem Display für längere Akkulaufzeit.",
+    "image": "https://www.mobvoi.com/cdn/shop/products/TicWatch_Pro_5_Obsidian_1_1024x1024.jpg?v=1682041865",
+    "technical-details": {
+      "type": "Smartwatch",
+      "os": "Wear OS",
+      "display-size": "45mm",
+      "connectivity": "GPS, Bluetooth, Wi-Fi"
+    },
+    "comments": {
+      "id": 1,
+      "author": "TechGeek",
+      "text": "Das duale Display ist genial!",
+      "rating": 4
+    }
+  },
+  {
+    "id": 10,
+    "name": "Suunto 9 Peak Pro",
+    "manufacturer": "Suunto",
+    "price": 499,
+    "description": "Robuste Outdoor-Smartwatch mit langer Akkulaufzeit und präzisem GPS.",
+    "image": "https://www.suunto.com/media/catalog/product/cache/5c730d9c4761f02062a4192176d7410e/s/s/ss050822000_suunto_9_peak_pro_all_black_front_view_web.png",
+    "technical-details": {
+      "type": "Smartwatch",
+      "os": "Suunto OS",
+      "display-size": "43mm",
+      "connectivity": "GPS, Bluetooth, Wi-Fi"
+    },
+    "comments": {
+      "id": 1,
+      "author": "MountainClimber",
+      "text": "Hält alles aus und zeigt mir den Weg!",
+      "rating": 5
+    }
+  }
+]

@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../components/header";
 import Nav from "../components/nav";
 import Footer from "../components/footer";
+import { formatPrice } from "../utils"; 
 import "../styles.css";
 
 const categories = [
@@ -57,7 +58,7 @@ const Main = () => {
               <div className="itemContainer">
                 <img className="itemImage" src={product.image} alt={product.name} />
                 <div className="itemDescription">{product.description}</div>
-                <div className="itemPrice">{product.price}</div>
+                <div className="productPrice">{formatPrice(product.price)}</div> {/* Formatiere den Preis */}
                 <button className="cart-button">In den Warenkorb</button>
               </div>
             </div>

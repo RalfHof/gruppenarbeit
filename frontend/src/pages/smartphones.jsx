@@ -2,17 +2,22 @@ import React, { useState, useEffect } from "react";
 import Header from "../components/header";
 import Nav from "../components/nav";
 import Footer from "../components/footer";
+//import { formatPrice } from "../utils"; 
 import "../styles.css";
 
 const Item = ({ item }) => (
   <div className="itemCard">
     <div className="itemContainer">
       <h3 className="itemName">{item.name}</h3>
+      
       <img className="itemImage" src={item.image} alt={item.name} />
     </div>
     <div className="descriptionContainer">
       <p className="itemDescription">{item.description}</p>
-      <p className="itemPrice">{item.price}€</p>
+      <p className="itemPrice">{new Intl.NumberFormat("de-DE", {
+                    style: "currency",
+                    currency: "EUR",
+                  }).format( item.price)}</p> {/* Formatiere den Preis */}
       <button className="cart-button">In den Warenkorb</button>
     </div>
   </div>
@@ -76,8 +81,6 @@ const Smartphones = () => (
 );
 
 export default Smartphones;
-
-
 
 
 

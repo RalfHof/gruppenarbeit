@@ -1,0 +1,21 @@
+[
+    {
+      "id": 1,
+      "name": "Apple iPhone 12",
+      "description": "Beschreibung für Apple iPhone 12",
+      "price": 999.99,
+      "image": "/path/to/image1.jpg",
+      "thumbnails": ["/path/to/thumb1.jpg", "/path/to/thumb2.jpg"],
+      "recommended": ["/path/to/recommend1.jpg", "/path/to/recommend2.jpg"],
+      "colors": ["Schwarz", "Weiß", "Blau", "Rot"],
+      "storageOptions": ["32GB", "64GB", "128GB"],
+      "specs": {
+        "type": "Smartphone",
+        "os": "iOS",
+        "cpu": "A14 Bionic",
+        "memory": "4GB"
+      },
+      "reviews": []
+    }
+  ]
+  
