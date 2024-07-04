@@ -24,7 +24,7 @@ app.get("/smartphones", async (req, res) => {
 app.get("/product", async (req, res) => {
   try {
     const product = await fs.readFile("product.json", "utf8"); //Speicherung in Variable, um Zustand zu wahren
-    const parsedSmartphones = JSON.parse(product); //Zerlegung des JSON Format in JavaScript Objecte
+    const parsedproduct = JSON.parse(product); //Zerlegung des JSON Format in JavaScript Objecte
     res.status(200).json(parsedproduct);
   } catch (error) {
     console.error("Fehler beim auslesen", error);
@@ -69,4 +69,4 @@ app.listen(PORT, () => {
   console.log(`Server running on port  http://localhost:${PORT}`);
 });
 
-app.get("/products", (req, res) => readFileAndSendResponse("products.json", res));
+app.get("/product", (req, res) => readFileAndSendResponse("product.json", res));

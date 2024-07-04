@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
-//import Header from "../components/header";
-//import Nav from "../components/nav";
-//import Footer from "../components/footer";
-//import "../styles.css";
-//import "../product.css";
+import Header from "../components/header";
+import Nav from "../components/nav";
+import Footer from "../components/footer";
+import "../styles.css";
+import "../product.css";
 
 const Product = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/products')
+    fetch('http://localhost:5000/product')
       .then(response => response.json())
       .then(data => setProducts(data))
       .catch(error => console.error('Fehler beim Laden der Produkte:', error));
@@ -90,6 +90,8 @@ const Product = () => {
     </>
   );
 };
+
+
 
 export default Product;
 

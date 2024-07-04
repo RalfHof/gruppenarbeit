@@ -8,6 +8,7 @@ import "../styles.css";
 const categories = [
   { name: "Smartphones", link: "/smartphones" },
   { name: "Smartwatches", link: "/smartwatches" }
+  
 ];
 
 const manufacturers = ["Hersteller 1", "Hersteller 2", "Hersteller 3", "Hersteller 4"];
