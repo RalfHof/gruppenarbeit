@@ -5,8 +5,7 @@ import Home from './pages/home';
 import Smartphones from './pages/smartphones';
 import Smartwatches from './pages/smartwatches';
 import Product from './pages/product'; 
-//import './styles.css';
-//import './product.css'
+
 
 const App = () => (
   <Router>

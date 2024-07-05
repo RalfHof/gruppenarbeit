@@ -3,8 +3,7 @@ import Header from "../components/header";
 import Nav from "../components/nav";
 import Footer from "../components/footer";
 import { formatPrice } from "../utils";
-import "../styles.css";
-//import "../product.css";
+
 
 const Item = ({ item }) => (
   <div className="itemCard">

@@ -2,8 +2,6 @@ import React from "react";
 import Header from "../components/header";
 import Nav from "../components/nav";
 import Footer from "../components/footer";
-import "../styles.css";
-//import "../product.css";
 
 const Filter = ({ title, options }) => (
   <div className="filter">

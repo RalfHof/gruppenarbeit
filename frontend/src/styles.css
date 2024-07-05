@@ -231,65 +231,32 @@ main {
 }
 
 
-/* Product Page Styles */
-/* .productMain {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+/* Specific Styles for Product Page */
+ .productContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
   padding: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  margin: 20px;
 }
 
-.productContainer {
-  display: flex;
-  width: 80%;
-  margin-bottom: 20px;
-}
-
-.productDetails {
-  flex: 2;
-}
-
-.productPurchase {
-  flex: 1;
+.productDetails, .productPurchase {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-}
-
-.productImageContainer {
-  display: flex;
-  justify-content: center;
-  margin: 10px 0;
+  gap: 20px;
 }
 
 .productImage {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-}
-
-.thumbnailContainer {
-  display: flex;
-  justify-content: space-around;
-  margin: 10px 0;
-}
-
-.thumbnail {
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-}
-
-.recommendedCombos {
-  margin: 20px 0;
+  width: 100%;
+  height: auto;
 }
 
 .recommendedItem {
   display: flex;
-}
-
-.recommendedImageContainer {
-  margin-right: 10px;
+  gap: 10px;
 }
 
 .recommendedImage {
@@ -298,18 +265,16 @@ main {
   object-fit: cover;
 }
 
-.productPurchase h1 {
-  margin: 20px 0;
-}
-
 .productOptions {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  gap: 10px;
 }
 
 .productOption {
-  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .optionContainer {
@@ -320,38 +285,42 @@ main {
 .optionButton {
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  background-color: #f8f8f9;
   cursor: pointer;
-  background-color: #f2f2f2;
 }
 
 .optionButton:hover {
   background-color: #ddd;
 }
 
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0;
+}
+
 .infoSection {
-  width: 100%;
-  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .infoButton {
-  width: 100%;
   padding: 10px;
-  text-align: left;
-  background-color: #f2f2f2;
-  border: none;
+  border: 1px solid #ccc;
+  background-color: #f8f8f9;
   cursor: pointer;
+  text-align: left;
+}
+
+.infoButton:hover {
+  background-color: #ddd;
 }
 
 .infoContent {
+  display: none;
   padding: 10px;
   border: 1px solid #ccc;
-  border-top: none;
-  display: none;
-}
-
- Display content when button is clicked 
-//.infoButton.active + .infoContent {
-  display: block;
+  background-color: #fff;
 }
  
