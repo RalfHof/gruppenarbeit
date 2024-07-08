@@ -14,6 +14,9 @@ const Filter = ({ title, options }) => (
   </div>
 );
 
+
+
+
 const Item = ({ item }) => (
   <div className="itemCard">
     <div className="itemContainer">
@@ -43,7 +46,12 @@ const Main = () => {
         <div className="mainContainer">
           <div className="itemFilter">
             <Filter title="Preis" options={["0-50", "50-100", "100-150", "150-300", "300-500"]} />
-            <Filter title="Hersteller" options={["Hersteller 1", "Hersteller 2", "Hersteller 3"]} />
+            <Filter title="Hersteller" options={["Apple", "Samsung", "Huawei" ,""]} />
+            <Filter title="Farbe" options={["Schwarz", "Weiß", "Grün", "Blau" ,"Rot"]} />
+            <Filter title="Speicher" options={["128", "256", "512", "1 T" ]} />
+            <ul>
+
+            </ul>
           </div>
           <div className="itemContainer">
             {dummyItems.map((item) => (

@@ -20,9 +20,7 @@ root.render(
       <Route path="/smartwatches" element={<Smartwatches />} />
       <Route path="/smartphones" element={<Smartphones />} />
       <Route path="/accessories" element={<Accessories />} />
-      <Route path="/product" element={<Product />} />
-      
-      
+      <Route path="/product" element={<Product />} />          
     </Routes>
   </Router>
 );

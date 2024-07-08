@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import Header from "../components/header";
 import Nav from "../components/nav";
 import Footer from "../components/footer";
-//import "../product.css";
+
 const Product = () => {
-const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
     fetch('http://localhost:5000/product')
@@ -13,7 +13,10 @@ const [products, setProducts] = useState([]);
       .catch(error => console.error('Fehler beim Laden der Produkte:', error));
   }, []);
 
-
+  const addToCart = (product) => {
+    console.log(`Produkt ${product.name} zum Warenkorb hinzugefügt`);
+    // Hier  den Code hinzufügen, um das Produkt zum Warenkorb hinzuzufügen
+  };
 
   return (
     <>
@@ -67,7 +70,7 @@ const [products, setProducts] = useState([]);
                   </div>
                 </div>
               </div>
-              <button className="cart-button">In den Warenkorb</button>
+              <button className="cart-button" onClick={() => addToCart(product)}>In den Warenkorb</button>
             </div>
           </div>
         ))}
@@ -92,6 +95,3 @@ const [products, setProducts] = useState([]);
 };
 
 export default Product;
-
-
-

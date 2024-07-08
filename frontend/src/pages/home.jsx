@@ -19,7 +19,7 @@ const products = [
   { name: "Produkt 2", description: "Beschreibung 2", price: "200€", image: "https://via.placeholder.com/150", link: "#" },
   { name: "Produkt 3", description: "Beschreibung 3", price: "300€", image: "https://via.placeholder.com/150", link: "#" },
   { name: "Produkt 4", description: "Beschreibung 4", price: "400€", image: "https://via.placeholder.com/150", link: "#" },
-  { name: "Produkt 5", description: "Beschreibung 5", price: "500€", image: "https://via.placeholder.com/150", link: "#" }
+  { name: "Produkt 5", description: "Beschreibung 5", price: "500€", image: "https://via.placeholder.com/150", link: "#" },
 ];
 
 const Main = () => {
@@ -74,22 +74,14 @@ const Main = () => {
 function Home() {
   return (
     <>
-      <Header site={"Startseite"} />
+      <Header site={"Home"} />
       <Nav />
       <Main />
       <Footer />
+      
     </>
   );
 }
 
 export default Home;
-
-
-
-
-
-
-
-
-
 
