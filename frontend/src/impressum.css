@@ -1,0 +1,37 @@
+/* Allgemeine Container-Stile */
+.impressum-container {
+    max-width: 1000px auto; /* Begrenzt die Breite des Impressums */
+    margin: 0 auto; /* Zentriert den Container horizontal */
+    padding: 20px;
+    font-family: sans-serif; /* Wähle eine gut lesbare Schriftart */
+    line-height: 1.6; /* Verbessert die Lesbarkeit */
+  }
+  
+  /* Überschriften-Stile */
+  h2 {
+    color: #000000; /* Dunkelblau, passend zur Navigationsleiste */
+    text-align: center; /* Zentriert die Überschrift */
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    color: #000000; /* Etwas dunklerer Grauton */
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  
+  /* Absatz-Stile */
+  p {
+    margin-bottom: 50px;
+  }
+  
+  /* Zusätzliche Stile (optional) */
+  .impressum-container a { /* Links im Impressum */
+    color: #000000; /* Blauer Link-Stil */
+    text-decoration: none;
+  }
+  
+  .impressum-container a:hover {
+    text-decoration: underline;
+  }
+  

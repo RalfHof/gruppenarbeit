@@ -23,6 +23,30 @@ const products = [
 ];
 
 const Main = () => {
+ /*  const [data, setData] = useState([]);
+  const [manufacturers, setManufacturers] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("http://localhost:5000/smartphones");
+        const result = await response.json();
+        setData(result);
+
+        const uniqueManufacturers = [
+          ...new Set(result.map(item => item.manufacturer))
+        ];
+        setManufacturers(uniqueManufacturers);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []); */
+
+  
+ 
   return (
     <>
       <main className="homeMain">
@@ -54,6 +78,7 @@ const Main = () => {
         <div className="spacer">
           <h2>Häufig gekauft:</h2>
         </div>
+        
         <div className="productContainer">
           {products.map((product, index) => (
             <div key={index} className="itemCard">

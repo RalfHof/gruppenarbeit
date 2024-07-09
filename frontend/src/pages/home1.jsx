@@ -3,16 +3,18 @@ import Header from "../components/header";
 import Nav from "../components/nav";
 import Footer from "../components/footer";
 
-const Filter = ({ title, options }) => (
-  <div className="filter">
-    <p>{title}</p>
-    <select>
-      {options.map((option, index) => (
-        <option key={index}>{option}</option>
-      ))}
-    </select>
-  </div>
-);
+
+  // Filter-Komponente
+  const Filter = ({ title, options }) => (
+    <div className="filter">
+      <p>{title}</p>
+      <div className="filter-options">
+        {options.map((option, index) => (
+          <button key={index} className="filter-button">{option}</button>
+        ))}
+      </div>
+    </div>
+  );
 
 
 
@@ -25,7 +27,10 @@ const Item = ({ item }) => (
     </div>
     <div className="descriptionContainer">
       <p className="itemDescription">{item.description}</p>
-      <p className="itemPrice">{item.price}€</p>
+      <p className="itemPrice">{new Intl.NumberFormat("de-DE", {
+                    style: "currency",
+                    currency: "EUR",
+                  }).format( item.price)}</p> {/* Formatiere den Preis */}
       <button className="cart-button">In den Warenkorb</button>
     </div>
   </div>
