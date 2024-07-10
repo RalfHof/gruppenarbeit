@@ -1,19 +1,28 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import "../styles/itemcard.css";
 
-export default function ItemCard({ item }) {
+function ItemCard({ option }) {
   return (
-    <div className="col">
-      <div className="card h-100">
-        <img src={item.image} className="card-img-top" alt={item.name} />
-        <div className="card-body">
-          <h5 className="card-title">{item.name}</h5>
-          <p className="card-text">{item.description}</p>
-        </div>
-        <div className="card-footer">
-          <Link to={`/smartphones/${item.id}`} className="btn btn-primary">Mehr erfahren</Link>
+    <div className="itemCard" key={product.id}>
+      <div className="itemCardContent">
+        <h3 className="itemTitle">{product.name}</h3>
+        <div className="itemBody">
+          <img src={product.image} alt={product.name} />
+          <p>{product.description}</p>
+          <div className="bodyComponent">
+            <p>
+              {new Intl.NumberFormat("de-DE", {
+                style: "currency",
+                currency: "EUR",
+              }).format(option.price)}
+            </p>
+            <button>Weitere Details</button>
+          </div>
         </div>
       </div>
     </div>
   );
 }
+
+export default ItemCard;

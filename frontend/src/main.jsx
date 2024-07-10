@@ -11,6 +11,7 @@ import './styles.css';
 import './product.css';
 import Error from './pages/error.jsx';
 //import Impressum from './pages/impressum.jsx';
+//import Filter from './components/filter.jsx'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -24,6 +25,7 @@ root.render(
       <Route path="/product" element={<Product />} />
       <Route path="/error" element={<Error />} />
       {/* <Route path="/impressum" element={<Impressum />} /> */}
+ {/*      <Route path="/filter" element={<Filter />} /> */}
     </Routes>
   </Router>
 );

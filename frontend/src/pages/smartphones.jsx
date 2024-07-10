@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Header from "../components/header";
 import Nav from "../components/nav";
 import Footer from "../components/footer";
+//import Filter from "../components/filter"
 
 // Einzelne Item-Komponente
 const Item = ({ item }) => (
@@ -24,7 +25,7 @@ const Item = ({ item }) => (
 );
 
 // Filter-Komponente
-const Filter = ({ title, options }) => (
+ const Filter = ({ title, options }) => (
   <div className="filter">
     <p>{title}</p>
     <div className="filter-options">
@@ -35,7 +36,10 @@ const Filter = ({ title, options }) => (
       ))}
     </div>
   </div>
-);
+); 
+
+
+
 
 // Hauptkomponente
 const Main = () => {
@@ -61,6 +65,8 @@ const Main = () => {
     fetchData();
   }, []);
 
+
+  
   return (
     <main className="mainContainer">
       <div className="itemFilter">

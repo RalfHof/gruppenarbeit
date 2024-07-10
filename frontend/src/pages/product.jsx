@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react';
 import Header from "../components/header";
 import Nav from "../components/nav";
 import Footer from "../components/footer";
+import '../product.css';
 
 const Product = () => {
   const [products, setProducts] = useState([]);
+  const [smartphoneManufacturers, setSmartphoneManufacturers] = useState([]);
 
   useEffect(() => {
     fetch('http://localhost:5000/product')
@@ -13,9 +15,21 @@ const Product = () => {
       .catch(error => console.error('Fehler beim Laden der Produkte:', error));
   }, []);
 
+  useEffect(() => {
+    const manufacturers = Array.from(
+      new Set(
+        products
+          .filter((item) => item.specs?.type.toLowerCase() === "smartphone")
+          .map((item) => item.manufacturer)
+      )
+    );
+    setSmartphoneManufacturers(manufacturers);
+    console.log(manufacturers);
+  }, [products]);
+
   const addToCart = (product) => {
     console.log(`Produkt ${product.name} zum Warenkorb hinzugefügt`);
-    // Hier  den Code hinzufügen, um das Produkt zum Warenkorb hinzuzufügen
+    // Hier den Code hinzufügen, um das Produkt zum Warenkorb hinzuzufügen
   };
 
   return (
@@ -23,23 +37,31 @@ const Product = () => {
       <Header site="Product Detail" />
       <Nav />
       <main className="productMain">
+        <div className="smartphoneManufacturers">
+          <h2>Smartphone-Hersteller</h2>
+          <ul>
+            {smartphoneManufacturers.map((manufacturer, index) => (
+              <li key={index}>{manufacturer}</li>
+            ))}
+          </ul>
+        </div>
         {products.map(product => (
           <div className="productContainer" key={product.id}>
             <div className="productDetails">
               <h2>{product.name}</h2>
-              <p>Bewertung: {product.name}</p>
+              <p>Bewertung: {product.reviews.length}</p>
               <div className="productImageContainer">
                 <img src={product.image} alt={product.name} className="productImage" />
               </div>
               <div className="thumbnailContainer">
-                {product.thumbnails.map((thumb, index) => (
+                {product.thumbnails?.map((thumb, index) => (
                   <img key={index} src={thumb} alt={product.name} className="thumbnail" />
                 ))}
               </div>
               <div className="recommendedCombos">
                 <h3>Empfohlene Kombinationen</h3>
                 <div className="recommendedItem">
-                  {product.recommended.map((rec, index) => (
+                  {product.recommended?.map((rec, index) => (
                     <div key={index} className="recommendedImageContainer">
                       <img src={rec} alt="Empfohlene Kombination" className="recommendedImage" />
                     </div>
@@ -48,15 +70,15 @@ const Product = () => {
               </div>
             </div>
             <div className="productPurchase">
-              <h1>{new Intl.NumberFormat("de-DE", {
+              <h2>{new Intl.NumberFormat("de-DE", {
                     style: "currency",
                     currency: "EUR",
-                  }).format(product.price)}</h1>
+                  }).format(product.price)}</h2>
               <div className="productOptions">
                 <div className="productOption">
                   <p>Farbwahl</p>
                   <div className="optionContainer">
-                    {product.colors.map((color, index) => (
+                    {product.colors?.map((color, index) => (
                       <button key={index} className="optionButton">{color}</button>
                     ))}
                   </div>
@@ -64,7 +86,7 @@ const Product = () => {
                 <div className="productOption">
                   <p>Speicherkapazität</p>
                   <div className="optionContainer">
-                    {product.storageOptions.map((storage, index) => (
+                    {product.storageOptions?.map((storage, index) => (
                       <button key={index} className="optionButton">{storage}</button>
                     ))}
                   </div>

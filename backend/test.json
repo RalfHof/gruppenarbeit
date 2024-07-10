@@ -1,0 +1,30 @@
+[
+    {
+      "id": 1,
+      "name": "iPhone 14 Pro",
+      "manufacturer": "Apple",
+      "price": 1099,
+      "color": ["Polarstar", "(PRODUCT)RED", "Midnight"],
+      "description": "Profi-Smartphone mit leistungsstarkem A16 Bionic Chip und fortschrittlichem Kamerasystem.",
+      "image": "https://www.apple.com/v/iphone-14-pro/e/images/overview/design/finishes_1_iphone-14-pro-colors__en789wwy522q_large.jpg",
+      "technicalDetails": {
+        "type": "Smartphone",
+        "os": "iOS 16",
+        "cpu": "A16 Bionic Chip"
+      },
+      "comments": [
+        {
+          "id": 1,
+          "author": "AppleFan",
+          "text": "Die Kamera ist einfach unglaublich!",
+          "rating": 5
+        },
+        {
+          "id": 2,
+          "author": "TechReviewer",
+          "text": "Der neue A16 Chip ist sehr schnell.",
+          "rating": 4
+        }
+      ]
+    }
+  ]
