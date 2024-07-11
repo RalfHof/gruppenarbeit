@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Header from "../components/header";
 import Nav from "../components/nav";
 import Footer from "../components/footer";
-//import Filter from "../components/filter"
 
 // Einzelne Item-Komponente
 const Item = ({ item }) => (
@@ -25,26 +24,26 @@ const Item = ({ item }) => (
 );
 
 // Filter-Komponente
- const Filter = ({ title, options }) => (
+const Filter = ({ title, options, onFilterChange }) => (
   <div className="filter">
     <p>{title}</p>
     <div className="filter-options">
       {options.map((option, index) => (
-        <button key={index} className="filter-button">
+        <button key={index} className="filter-button" onClick={() => onFilterChange(option)}>
           {option}
         </button>
       ))}
     </div>
   </div>
-); 
-
-
-
+);
 
 // Hauptkomponente
 const Main = () => {
   const [data, setData] = useState([]);
   const [manufacturers, setManufacturers] = useState([]);
+  const [filteredData, setFilteredData] = useState([]);
+  const [selectedManufacturer, setSelectedManufacturer] = useState("");
+  const [selectedPriceRange, setSelectedPriceRange] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -52,6 +51,7 @@ const Main = () => {
         const response = await fetch("http://localhost:5000/smartphones");
         const result = await response.json();
         setData(result);
+        setFilteredData(result);
 
         const uniqueManufacturers = [
           ...new Set(result.map(item => item.manufacturer))
@@ -65,20 +65,47 @@ const Main = () => {
     fetchData();
   }, []);
 
+  const handleFilterChange = (type, value) => {
+    let filtered = data;
+    if (type === "manufacturer") {
+      setSelectedManufacturer(value);
+      if (value) {
+        filtered = filtered.filter(item => item.manufacturer === value);
+      }
+    } else if (type === "price") {
+      setSelectedPriceRange(value);
+      if (value) {
+        const [min, max] = value.split(" - ").map(Number);
+        filtered = filtered.filter(item => item.price >= min && item.price <= max);
+      }
+    }
+    setFilteredData(filtered);
+  };
 
-  
   return (
     <main className="mainContainer">
       <div className="itemFilter">
         <h2>Filter</h2>
-        <Filter title="Hersteller" options={manufacturers} />
-        <Filter title="Preis" options={["0 - 500", "500 - 1000", "1000 - 1500", "1500 - 2000"]} />
-        <Filter title="Technische Details" options={["OS: Android", "Display-Größe: 5 - 6 Zoll", "Konnektivität: 5G"]} />
+        <Filter
+          title="Hersteller"
+          options={manufacturers}
+          onFilterChange={(option) => handleFilterChange("manufacturer", option)}
+        />
+        <Filter
+          title="Preis"
+          options={["0 - 500", "500 - 1000", "1000 - 1500", "1500 - 2000"]}
+          onFilterChange={(option) => handleFilterChange("price", option)}
+        />
+        <Filter
+          title="Technische Details"
+          options={["OS: Android", "Display-Größe: 5 - 6 Zoll", "Konnektivität: 5G"]}
+          onFilterChange={(option) => handleFilterChange("technical", option)}
+        />
       </div>
       <div className="content">
         <h2>Smartphones</h2>
         <div className="itemContainer">
-          {data.map((item) => (
+          {filteredData.map((item) => (
             <Item key={item.id} item={item} />
           ))}
         </div>

@@ -1,40 +1,33 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../components/header";
 import Nav from "../components/nav";
 import Footer from "../components/footer";
-import { formatPrice } from "../utils"; 
-
-
+import { formatPrice } from "../utils";
 
 const categories = [
   { name: "Smartphones", link: "/smartphones" },
   { name: "Smartwatches", link: "/smartwatches" }
-  
-];
-
-const manufacturers = ["Hersteller 1", "Hersteller 2", "Hersteller 3", "Hersteller 4"];
-
-const products = [
-  { name: "Produkt 1", description: "Beschreibung 1", price: "100€", image: "https://via.placeholder.com/150", link: "#" },
-  { name: "Produkt 2", description: "Beschreibung 2", price: "200€", image: "https://via.placeholder.com/150", link: "#" },
-  { name: "Produkt 3", description: "Beschreibung 3", price: "300€", image: "https://via.placeholder.com/150", link: "#" },
-  { name: "Produkt 4", description: "Beschreibung 4", price: "400€", image: "https://via.placeholder.com/150", link: "#" },
-  { name: "Produkt 5", description: "Beschreibung 5", price: "500€", image: "https://via.placeholder.com/150", link: "#" },
 ];
 
 const Main = () => {
- /*  const [data, setData] = useState([]);
+  const [smartphoneData, setSmartphoneData] = useState([]);
+  const [smartwatchData, setSmartwatchData] = useState([]);
   const [manufacturers, setManufacturers] = useState([]);
+  const [product, setProducts] =useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:5000/smartphones");
-        const result = await response.json();
-        setData(result);
+        const smartphoneResponse = await fetch("http://localhost:5000/smartphones");
+        const smartphoneResult = await smartphoneResponse.json();
+        setSmartphoneData(smartphoneResult);
+
+        const smartwatchResponse = await fetch("http://localhost:5000/smartwatches");
+        const smartwatchResult = await smartwatchResponse.json();
+        setSmartwatchData(smartwatchResult);
 
         const uniqueManufacturers = [
-          ...new Set(result.map(item => item.manufacturer))
+          ...new Set([...smartphoneResult, ...smartwatchResult].map(item => item.manufacturer))
         ];
         setManufacturers(uniqueManufacturers);
       } catch (error) {
@@ -43,10 +36,10 @@ const Main = () => {
     };
 
     fetchData();
-  }, []); */
+  }, []);
 
-  
- 
+  const products = [...smartphoneData, ...smartwatchData];
+
   return (
     <>
       <main className="homeMain">
@@ -85,7 +78,7 @@ const Main = () => {
               <div className="itemContainer">
                 <img className="itemImage" src={product.image} alt={product.name} />
                 <div className="itemDescription">{product.description}</div>
-                <div className="productPrice">{formatPrice(product.price)}</div> {/* Formatiere den Preis */}
+                <div className="productPrice">{formatPrice(product.price)}</div>
                 <button className="cart-button">In den Warenkorb</button>
               </div>
             </div>
@@ -103,10 +96,10 @@ function Home() {
       <Nav />
       <Main />
       <Footer />
-      
     </>
   );
 }
 
 export default Home;
+
 

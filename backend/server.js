@@ -10,6 +10,17 @@ app.use(bodyParser.json());
 
 app.use(cors());
 
+app.get("/warenkorb", async (req, res) => {
+  try {
+    const warenkorb = await fs.readFile("warenkorb.json", "utf8");
+    const parsedWarenkorb = JSON.parse(warenkorb);
+    res.status(200).json(parsedWarenkorb);
+  } catch (error) {
+    console.error("Fehler beim Auslesen", error);
+    res.status(500).json(error);
+  }
+});
+
 app.get("/smartphones", async (req, res) => {
   try {
     const smartphones = await fs.readFile("smartphones.json", "utf8");
@@ -32,6 +43,7 @@ app.get("/product", async (req, res) => {
   }
 });
 
+
 app.get("/smartwatches", async (req, res) => {
   try {
     const smartwatches = await fs.readFile("smartwatches.json", "utf8");
@@ -39,6 +51,20 @@ app.get("/smartwatches", async (req, res) => {
     res.status(200).json(parsedSmartwatches);
   } catch (error) {
     console.error("Fehler beim Auslesen", error);
+    res.status(500).json(error);
+  }
+});
+
+app.get("/products/:id", async (req, res) => {
+  const id = req.params.id;
+  try {
+    const products = await fs.readFile("products.json", "utf8");
+    const parsedProducts = JSON.parse(products);
+
+    const product = parsedProducts.find((item) => item.id === parseInt(id));
+    res.json(product);
+  } catch (error) {
+    console.error("Fehler beim auslesen", error);
     res.status(500).json(error);
   }
 });
@@ -97,6 +123,8 @@ app.get("/manufacturers", async (req, res) => {
     res.status(500).json(error);
   }
 });
+
+
 
 app.listen(PORT, () => {
   console.log(`Server running on port http://localhost:${PORT}`);

@@ -1,0 +1,42 @@
+.warenkorb {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Optional: Begrenzt die Breite des Warenkorbs */
+  }
+  .warenkorb h2 {
+    margin-bottom: 15px;
+    color: #333;
+  }
+  .warenkorb ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  .warenkorb li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px dotted #eee;
+  }
+  .warenkorb li:last-child {
+    border-bottom: none;
+  }
+  .warenkorb button {
+    background-color: #007BFF; /* Rotton */
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .warenkorb button:hover {
+    background-color: #55A7FF; /* Dunklerer Rotton beim Hover */
+  }
+  .warenkorb p {
+    margin-top: 10px;
+    font-weight: bold;
+  }

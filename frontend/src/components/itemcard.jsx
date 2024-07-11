@@ -1,23 +1,28 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "../styles/itemcard.css";
+import React from "react";
+import { NavLink } from "react-router-dom";
+import "../styles/itemcard.css";
 
-function ItemCard({ option }) {
+function ItemCard({ options }) {
   return (
-    <div className="itemCard" key={product.id}>
+    <div className="itemCard" key={options.id}>
       <div className="itemCardContent">
-        <h3 className="itemTitle">{product.name}</h3>
+        <h3 className="itemTitle">{options.name}</h3>
         <div className="itemBody">
-          <img src={product.image} alt={product.name} />
-          <p>{product.description}</p>
+          <img src={options.image} alt={options.name} />
+          <p>{options.description}</p>
           <div className="bodyComponent">
             <p>
               {new Intl.NumberFormat("de-DE", {
                 style: "currency",
                 currency: "EUR",
-              }).format(option.price)}
+              }).format(options.price)}
             </p>
-            <button>Weitere Details</button>
+            <NavLink to={`/product/${options.id}`}>
+              <button>Weitere Details</button>
+            </NavLink>
           </div>
         </div>
       </div>
