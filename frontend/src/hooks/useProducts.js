@@ -1,5 +1,5 @@
 // src/hooks/useProducts.js
-import { useState, useEffect } from 'react';
+/* import { useState, useEffect } from 'react';
 import { fetchSmartphones, fetchSmartwatches } from '../api';
 
 const useProducts = () => {
@@ -39,3 +39,4 @@ const useProducts = () => {
 
 export default useProducts;
 
+ */

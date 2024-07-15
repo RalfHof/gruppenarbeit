@@ -1,0 +1,124 @@
+[
+    {
+      "orderID": 1,
+      "customerID": 3,
+      "orderDate": "2024-07-03T09:20:00Z",
+      "status": "processing",
+      "shippingAddress": {
+        "street": "Musterstraße 12",
+        "city": "Musterstadt",
+        "postalCode": "12345",
+        "country": "Deutschland"
+      },
+      "items": [
+        {
+          "productId": 1,
+          "productName": "iPhone 14 Pro Max",
+          "quantity": 1,
+          "price": 1299
+        },
+        {
+          "productId": 2,
+          "productName": "Samsung Galaxy S23 Ultra",
+          "quantity": 1,
+          "price": 1199
+        }
+      ],
+      "total": 2498,
+      "paymentMethod": "credit_card"
+    },
+    {
+      "orderID": 2,
+      "customerID": 8,
+      "orderDate": "2024-07-02T15:30:00Z",
+      "status": "shipped",
+      "shippingAddress": {
+        "street": "Hauptstraße 5",
+        "city": "Berlin",
+        "postalCode": "10115",
+        "country": "Deutschland"
+      },
+      "items": [
+        {
+          "productId": 9,
+          "productName": "Asus ROG Phone 7",
+          "quantity": 1,
+          "price": 1099
+        }
+      ],
+      "total": 1099,
+      "paymentMethod": "paypal"
+    },
+    {
+      "orderID": 3,
+      "customerID": 5,
+      "orderDate": "2024-07-01T11:45:00Z",
+      "status": "delivered",
+      "shippingAddress": {
+        "street": "Bahnhofstraße 10",
+        "city": "Köln",
+        "postalCode": "50667",
+        "country": "Deutschland"
+      },
+      "items": [
+        {
+          "productId": 4,
+          "productName": "Xiaomi 13 Pro",
+          "quantity": 2,
+          "price": 999
+        }
+      ],
+      "total": 1998,
+      "paymentMethod": "credit_card"
+    },
+    {
+      "orderID": 4,
+      "customerID": 1,
+      "orderDate": "2024-06-30T18:15:00Z",
+      "status": "processing",
+      "shippingAddress": {
+        "street": "Gartenweg 3",
+        "city": "München",
+        "postalCode": "80331",
+        "country": "Deutschland"
+      },
+      "items": [
+        {
+          "productId": 3,
+          "productName": "Google Pixel 7 Pro",
+          "quantity": 1,
+          "price": 899
+        },
+        {
+          "productId": 5,
+          "productName": "OnePlus 11",
+          "quantity": 1,
+          "price": 849
+        }
+      ],
+      "total": 1748,
+      "paymentMethod": "credit_card"
+    },
+    {
+      "orderID": 5,
+      "customerID": 10,
+      "orderDate": "2024-06-29T10:00:00Z",
+      "status": "cancelled",
+      "shippingAddress": {
+        "street": "Waldstraße 25",
+        "city": "Frankfurt",
+        "postalCode": "60325",
+        "country": "Deutschland"
+      },
+      "items": [
+        {
+          "productId": 7,
+          "productName": "Nothing Phone (2)",
+          "quantity": 1,
+          "price": 599
+        }
+      ],
+      "total": 599,
+      "paymentMethod": "credit_card"
+    }
+  ]
