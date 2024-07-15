@@ -6,6 +6,7 @@ const useAuthHook = () => { // Umbenennen zu `useAuthHook`
   const navigate = useNavigate();
 
   const handleLogin = (username, password) => {
+    
     // Hier solltest du eine Anfrage an dein Backend senden, um den Benutzer zu authentifizieren
     // Nach erfolgreicher Authentifizierung, setze den Benutzer
     setUser({ username });

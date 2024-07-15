@@ -1,0 +1,14 @@
+{
+    "customerID": 1,
+    "userName": "JohnDoe",
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "john.doe@example.com",
+    "phoneNumber": "123-456-7890",
+    "shippingAddress": {
+      "street": "Musterstraße 12",
+      "city": "Musterstadt",
+      "postalCode": "12345",
+      "country": "Deutschland"
+    }
+  }

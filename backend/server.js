@@ -7,52 +7,46 @@ const PORT = 5000;
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
 app.use(cors());
 
-app.get("/warenkorb", async (req, res) => {
+// Funktion zur Vereinfachung des Lesens und Sendens von JSON-Dateien
+const readJsonFile = async (filename, res) => {
   try {
-    const warenkorb = await fs.readFile("warenkorb.json", "utf8");
-    const parsedWarenkorb = JSON.parse(warenkorb);
-    res.status(200).json(parsedWarenkorb);
+    const data = await fs.readFile(filename, 'utf8');
+    const parsedData = JSON.parse(data);
+    res.status(200).json(parsedData);
   } catch (error) {
-    console.error("Fehler beim Auslesen", error);
-    res.status(500).json(error);
+    console.error(`Fehler beim Auslesen der Datei ${filename}`, error);
+    res.status(500).json({ error: `Fehler beim Auslesen der Datei ${filename}` });
   }
+};
+
+// Funktion zum Schreiben von Daten in eine JSON-Datei
+const writeJsonFile = async (filename, data, res) => {
+  try {
+    await fs.writeFile(filename, JSON.stringify(data, null, 2));
+    res.status(200).json({ message: `Erfolgreich in ${filename} gespeichert` });
+  } catch (error) {
+    console.error(`Fehler beim Schreiben in die Datei ${filename}`, error);
+    res.status(500).json({ error: `Fehler beim Schreiben in die Datei ${filename}` });
+  }
+};
+
+// Definieren der Routen für das Lesen von Daten
+app.get("/warenkorb", async (req, res) => {
+  await readJsonFile("warenkorb.json", res);
 });
 
 app.get("/smartphones", async (req, res) => {
-  try {
-    const smartphones = await fs.readFile("smartphones.json", "utf8");
-    const parsedSmartphones = JSON.parse(smartphones);
-    res.status(200).json(parsedSmartphones);
-  } catch (error) {
-    console.error("Fehler beim Auslesen", error);
-    res.status(500).json(error);
-  }
+  await readJsonFile("smartphones.json", res);
 });
 
 app.get("/product", async (req, res) => {
-  try {
-    const product = await fs.readFile("product.json", "utf8");
-    const parsedProduct = JSON.parse(product);
-    res.status(200).json(parsedProduct);
-  } catch (error) {
-    console.error("Fehler beim Auslesen", error);
-    res.status(500).json(error);
-  }
+  await readJsonFile("product.json", res);
 });
 
-
 app.get("/smartwatches", async (req, res) => {
-  try {
-    const smartwatches = await fs.readFile("smartwatches.json", "utf8");
-    const parsedSmartwatches = JSON.parse(smartwatches);
-    res.status(200).json(parsedSmartwatches);
-  } catch (error) {
-    console.error("Fehler beim Auslesen", error);
-    res.status(500).json(error);
-  }
+  await readJsonFile("smartwatches.json", res);
 });
 
 app.get("/products/:id", async (req, res) => {
@@ -60,72 +54,75 @@ app.get("/products/:id", async (req, res) => {
   try {
     const products = await fs.readFile("products.json", "utf8");
     const parsedProducts = JSON.parse(products);
-
     const product = parsedProducts.find((item) => item.id === parseInt(id));
     res.json(product);
   } catch (error) {
-    console.error("Fehler beim auslesen", error);
+    console.error("Fehler beim Auslesen der Produkte", error);
     res.status(500).json(error);
   }
 });
 
 app.get("/customer", async (req, res) => {
-  try {
-    const customer = await fs.readFile("customer.json", "utf8");
-    const parsedCustomer = JSON.parse(customer);
-    res.status(200).json(parsedCustomer);
-  } catch (error) {
-    console.error("Fehler beim Auslesen", error);
-    res.status(500).json(error);
-  }
+  await readJsonFile("customer.json", res);
 });
 
 app.get("/orders", async (req, res) => {
-  try {
-    const orders = await fs.readFile("orders.json", "utf8");
-    const parsedOrders = JSON.parse(orders);
-    res.status(200).json(parsedOrders);
-  } catch (error) {
-    console.error("Fehler beim Auslesen", error);
-    res.status(500).json(error);
-  }
+  await readJsonFile("orders.json", res);
 });
 
 app.get("/home", async (req, res) => {
-  try {
-    const home = await fs.readFile("home.json", "utf8");
-    const parsedHome = JSON.parse(home);
-    res.status(200).json(parsedHome);
-  } catch (error) {
-    console.error("Fehler beim Auslesen", error);
-    res.status(500).json(error);
-  }
+  await readJsonFile("home.json", res);
 });
 
 app.get("/home1", async (req, res) => {
-  try {
-    const home1 = await fs.readFile("home1.json", "utf8");
-    const parsedHome1 = JSON.parse(home1);
-    res.status(200).json(parsedHome1);
-  } catch (error) {
-    console.error("Fehler beim Auslesen", error);
-    res.status(500).json(error);
-  }
+  await readJsonFile("home1.json", res);
 });
 
 app.get("/manufacturers", async (req, res) => {
+  await readJsonFile("manufacturers.json", res);
+});
+
+// POST-Endpunkt für die Benutzerregistrierung
+app.post("/register", async (req, res) => {
   try {
-    const manufacturers = await fs.readFile("manufacturers.json", "utf8");
-    const parsedManufacturers = JSON.parse(manufacturers);
-    res.status(200).json(parsedManufacturers);
+    const {
+      userName,
+      firstName,
+      lastName,
+      email,
+      phoneNumber,
+      shippingAddress
+    } = req.body;
+
+    // Laden der vorhandenen Kunden
+    const customers = await fs.readFile("customer.json", "utf8");
+    const parsedCustomers = JSON.parse(customers);
+
+    // Generierung der customerID (nur ein einfaches Beispiel)
+    const nextCustomerId = parsedCustomers.length + 1;
+
+    const newCustomer = {
+      customerID: nextCustomerId,
+      userName,
+      firstName,
+      lastName,
+      email,
+      phoneNumber,
+      shippingAddress
+    };
+
+    // Hinzufügen des neuen Kunden zur Liste
+    parsedCustomers.push(newCustomer);
+
+    // Aktualisierte Kundenliste in die Datei speichern
+    await writeJsonFile("customer.json", parsedCustomers, res);
   } catch (error) {
-    console.error("Fehler beim Auslesen", error);
+    console.error("Fehler beim Registrieren eines neuen Kunden", error);
     res.status(500).json(error);
   }
 });
 
-
-
+// Starten des Servers
 app.listen(PORT, () => {
-  console.log(`Server running on port http://localhost:${PORT}`);
+  console.log(`Server läuft auf http://localhost:${PORT}`);
 });
