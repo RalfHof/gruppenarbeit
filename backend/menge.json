@@ -1,0 +1,67 @@
+[
+    {
+      "id": 1,
+      "name": "Apple"
+    },
+    {
+      "id": 2,
+      "name": "Sony"
+    },
+    {
+      "id": 3,
+      "name": "Huawei"
+    },
+    {
+      "id": 4,
+      "name": "Samsung"
+    },
+    {
+      "id": 5,
+      "name": "Google"
+    },
+
+    {
+    
+   
+      "id": 1,
+          
+         
+      "name": "iPhone 12",
+          "description": "Apple Smartphone",
+          "price": 999,
+          
+         
+      "image": "url-to-image",
+          "manufacturer": "Apple",
+          
+         
+      "quantity": 5
+        
+       
+      },
+        
+       
+      {
+          
+         
+      "id": 2,
+          "name": "Samsung Galaxy Watch",
+          
+         
+      "description": "Samsung Smartwatch",
+          
+         
+      "price": 199,
+          
+         
+      "image": "url-to-image",
+          
+         
+      "manufacturer": "Samsung",
+          
+         
+      "quantity": 0
+        
+       
+      }
+  ]

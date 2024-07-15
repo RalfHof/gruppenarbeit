@@ -10,10 +10,10 @@ import Product from './pages/product.jsx';
 import './styles.css';
 import './product.css';
 import Error from './pages/error.jsx';
-import Warenkorb from './components/warenkorb.jsx'; 
+//import Warenkorb from './components/warenkorb.jsx'; 
 //import Kontakt from "../components/contakt.jsx";
 //import Impressum from './pages/impressum.jsx';
-//import Filter from './components/filter.jsx'
+import Filter from './components/filter.jsx'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -26,12 +26,12 @@ root.render(
       <Route path="/accessories" element={<Accessories />} />
       <Route path="/product" element={<Product />} />
       <Route path="/error" element={<Error />} />
-      <Route path="/warenkorb" element={<Warenkorb />} /> 
-
+      {/* <Route path="/warenkorb" element={<Warenkorb />} /> 
+ */}
 
       {/* <Route path="/contact" element={<Kontakt />} /> */}
       {/* <Route path="/impressum" element={<Impressum />} /> */}
- {/*      <Route path="/filter" element={<Filter />} /> */}
+      <Route path="/filter" element={<Filter />} /> 
     </Routes>
   </Router>
 );

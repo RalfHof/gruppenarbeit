@@ -323,4 +323,13 @@ main {
   border: 1px solid #ccc;
   background-color: #fff;
 }
+  /* mengen anzeigen */
+
+  .productAvailability {
+    font-size: 1rem;
+    color: green;
+  }
   
+  .productAvailability.out-of-stock {
+    color: red;
+  }
