@@ -21,39 +21,40 @@ h1, h2, h3, p, a, ul {
 
 /* Navigation Styles */
 nav {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  text-transform: uppercase;
   background-color: #3d5a6c;
   border-bottom: 1px solid black;
   padding: 20px;
+  color: #f8f8f9;
 }
 
 nav h1 {
-  justify-self: start;
   font-size: 2em;
-  color: #f8f8f9;
-}
-
-nav p {
-  justify-self: start;
-  color: #f8f8f9;
 }
 
 nav ul {
   display: flex;
-  justify-self: center;
   list-style: none;
   gap: 20px;
 }
 
-nav a {
+nav a, nav span {
   color: #f8f8f9;
+  text-decoration: none;
 }
 
-nav .cart {
-  justify-self: end;
+nav .logout-button {
+  background: none;
+  border: none;
+  color: #f8f8f9;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+nav .logout-button:hover {
+  text-decoration: underline;
 }
 
 /* Main Styles */
@@ -81,7 +82,7 @@ main {
   padding: 15px;
   display: flex;
   flex-direction: column;
-  position: relative; /* Add relative positioning for absolute children */
+  position: relative;
 }
 
 .itemContainer {
@@ -180,7 +181,7 @@ main {
   gap: 20px;
 }
 
-.content{
+.content {
   text-align: center;
 }
 
@@ -230,10 +231,8 @@ main {
   color: #f8f8f9;
 }
 
-
-
 /* Specific Styles for Product Page */
-  .productContainer {
+.productContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
@@ -323,13 +322,13 @@ main {
   border: 1px solid #ccc;
   background-color: #fff;
 }
-  /* mengen anzeigen */
 
-  .productAvailability {
-    font-size: 1rem;
-    color: green;
-  }
-  
-  .productAvailability.out-of-stock {
-    color: red;
-  }
+/* mengen anzeigen */
+.productAvailability {
+  font-size: 1rem;
+  color: green;
+}
+
+.productAvailability.out-of-stock {
+  color: red;
+}

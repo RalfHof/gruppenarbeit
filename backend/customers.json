@@ -28,5 +28,35 @@
       "postalCode": "68789",
       "country": "Deutschland"
     }
+  },
+  {
+    "customerID": 3,
+    "userName": "hund",
+    "firstName": "wauwau",
+    "lastName": "gassi",
+    "email": "geht-dich@nichts.an",
+    "password": "vergessen",
+    "phoneNumber": "080066666",
+    "shippingAddress": {
+      "street": "habe ich",
+      "city": "kenn ich",
+      "postalCode": "666666",
+      "country": "kenne ich auch"
+    }
+  },
+  {
+    "customerID": 4,
+    "userName": "max",
+    "firstName": "Max",
+    "lastName": "Musterman",
+    "email": "musterman@email.de",
+    "password": "musterman",
+    "phoneNumber": "0800000000",
+    "shippingAddress": {
+      "street": "musterstraße1",
+      "city": "musterstadt",
+      "postalCode": "6666666",
+      "country": "land"
+    }
   }
 ]
