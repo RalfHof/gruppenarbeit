@@ -1,9 +1,11 @@
-{
+[
+  {
     "customerID": 1,
     "userName": "JohnDoe",
     "firstName": "John",
     "lastName": "Doe",
     "email": "john.doe@example.com",
+    "password": "securepassword", 
     "phoneNumber": "123-456-7890",
     "shippingAddress": {
       "street": "Musterstraße 12",
@@ -12,3 +14,4 @@
       "country": "Deutschland"
     }
   }
+]

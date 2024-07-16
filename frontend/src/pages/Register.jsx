@@ -1,101 +1,73 @@
-
 import React, { useState } from 'react';
-import { useAuth } from '../hooks/AuthProvider';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 const Register = () => {
-  const [username, setUsername] = useState('');
+  const [userName, setUserName] = useState('');
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
-  const [street, setStreet] = useState('');
-  const [city, setCity] = useState('');
-  const [postalCode, setPostalCode] = useState('');
-  const [country, setCountry] = useState('');
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
 
-  const { handleRegister } = useAuth();
-
-  const handleSubmit = (e) => {
+  const handleRegister = async (e) => {
     e.preventDefault();
-    const shippingAddress = { street, city, postalCode, country };
-    handleRegister(username, firstName, lastName, email, phoneNumber, shippingAddress);
+
+    if (!userName || !firstName || !lastName || !email || !password || !phoneNumber) {
+      setError('Bitte alle Felder ausfüllen.');
+      return;
+    }
+
+    try {
+      const response = await axios.post('http://localhost:5000/register', {
+        userName,
+        firstName,
+        lastName,
+        email,
+        password,
+        phoneNumber
+      });
+
+      if (response.data.success) {
+        navigate('/login');
+      } else {
+        setError(response.data.message);
+      }
+    } catch (err) {
+      setError('Registrierung fehlgeschlagen.');
+    }
   };
 
   return (
     <div>
       <h2>Register</h2>
-      <form onSubmit={handleSubmit}>
+      {error && <p style={{ color: 'red' }}>{error}</p>}
+      <form onSubmit={handleRegister}>
         <div>
-          <label>Username:</label>
-          <input
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
+          <label>Username</label>
+          <input type="text" value={userName} onChange={(e) => setUserName(e.target.value)} />
         </div>
         <div>
-          <label>First Name:</label>
-          <input
-            type="text"
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
-          />
+          <label>First Name</label>
+          <input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
         </div>
         <div>
-          <label>Last Name:</label>
-          <input
-            type="text"
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
-          />
+          <label>Last Name</label>
+          <input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} />
         </div>
         <div>
-          <label>Email:</label>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
+          <label>Email</label>
+          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
         </div>
         <div>
-          <label>Phone Number:</label>
-          <input
-            type="text"
-            value={phoneNumber}
-            onChange={(e) => setPhoneNumber(e.target.value)}
-          />
+          <label>Password</label>
+          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </div>
         <div>
-          <label>Street:</label>
-          <input
-            type="text"
-            value={street}
-            onChange={(e) => setStreet(e.target.value)}
-          />
-        </div>
-        <div>
-          <label>City:</label>
-          <input
-            type="text"
-            value={city}
-            onChange={(e) => setCity(e.target.value)}
-          />
-        </div>
-        <div>
-          <label>Postal Code:</label>
-          <input
-            type="text"
-            value={postalCode}
-            onChange={(e) => setPostalCode(e.target.value)}
-          />
-        </div>
-        <div>
-          <label>Country:</label>
-          <input
-            type="text"
-            value={country}
-            onChange={(e) => setCountry(e.target.value)}
-          />
+          <label>Phone Number</label>
+          <input type="text" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
         </div>
         <button type="submit">Register</button>
       </form>
@@ -104,6 +76,8 @@ const Register = () => {
 };
 
 export default Register;
+
+
 
 
 

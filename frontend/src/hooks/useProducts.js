@@ -37,6 +37,6 @@ const useProducts = () => {
   return { smartphoneData, smartwatchData, manufacturers, isLoading, error };
 };
 
-export default useProducts;
+export default useProducts; 
 
- */
+  */

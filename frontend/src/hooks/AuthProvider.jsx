@@ -8,13 +8,21 @@ export const AuthProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null);
 
   const handleLogin = async (username, password) => {
-    const user = await auth.handleLogin(username, password);
-    setCurrentUser(user);
+    try {
+      const user = await auth.handleLogin(username, password);
+      setCurrentUser(user);
+    } catch (error) {
+      console.error('Login error:', error);
+    }
   };
 
   const handleRegister = async (username, password) => {
-    const user = await auth.handleRegister(username, password);
-    setCurrentUser(user);
+    try {
+      const user = await auth.handleRegister(username, password);
+      setCurrentUser(user);
+    } catch (error) {
+      console.error('Registration error:', error);
+    }
   };
 
   const handleLogout = () => {
@@ -32,4 +40,5 @@ export const AuthProvider = ({ children }) => {
 export const useAuth = () => {
   return useContext(AuthContext);
 };
+
 
