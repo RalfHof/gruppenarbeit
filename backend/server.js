@@ -72,7 +72,10 @@ app.get("/products/:id", async (req, res) => {
   try {
     const products = await readJsonFile("products.json");
     const product = products.find(item => item.id === parseInt(id));
-    res.json(product);
+    if (!product) {
+      return res.status(404).json({ error: `Produkt mit ID ${id} nicht gefunden` });
+    }
+    res.status(200).json(product);
   } catch (error) {
     console.error("Fehler beim Auslesen der Produkte", error);
     res.status(500).json({ error: `Fehler beim Auslesen der Datei products.json` });
@@ -81,10 +84,10 @@ app.get("/products/:id", async (req, res) => {
 
 app.get("/customer", async (req, res) => {
   try {
-    const data = await readJsonFile("customer.json");
+    const data = await readJsonFile("customers.json");
     res.status(200).json(data);
   } catch (error) {
-    res.status(500).json({ error: `Fehler beim Auslesen der Datei customer.json` });
+    res.status(500).json({ error: `Fehler beim Auslesen der Datei customers.json` });
   }
 });
 
@@ -120,7 +123,7 @@ app.get("/manufacturers", async (req, res) => {
     const data = await readJsonFile("manufacturers.json");
     res.status(200).json(data);
   } catch (error) {
-    res.status(500).json({ error: `Fehler beim Auslesen der Datei manufacturers.json` });
+    res.status(500).json({ error: `Fehler beim Auslesen der Datei manufacturers.json` }); // Hier wurde der Fehler behoben
   }
 });
 
@@ -128,7 +131,7 @@ app.get("/manufacturers", async (req, res) => {
 app.post("/register", async (req, res) => {
   const { userName, firstName, lastName, email, password, phoneNumber, shippingAddress } = req.body;
 
-  if (!userName || !firstName || !lastName || !email || !password || !phoneNumber) {
+  if (!userName || !firstName || !lastName || !email || !password || !phoneNumber || !shippingAddress) {
     return res.status(400).json({ success: false, message: 'Bitte alle Felder ausfüllen.' });
   }
 
@@ -147,18 +150,13 @@ app.post("/register", async (req, res) => {
       email,
       password,  // In einem realen Szenario sollte das Passwort verschlüsselt gespeichert werden.
       phoneNumber,
-      shippingAddress: {
-        street: '',
-        city: '',
-        postalCode: '',
-        country: ''
-      }
+      shippingAddress
     };
 
     customers.push(newCustomer);
     await writeJsonFile("customers.json", customers);
 
-    res.status(200).json({ success: true });
+    res.status(200).json({ success: true, message: 'Registrierung erfolgreich.' });
   } catch (error) {
     console.error("Fehler beim Registrieren eines neuen Kunden", error);
     res.status(500).json({ success: false, message: 'Registrierung fehlgeschlagen.' });
@@ -181,7 +179,7 @@ app.post("/login", async (req, res) => {
       return res.status(400).json({ success: false, message: 'Falsche Anmeldeinformationen.' });
     }
 
-    res.status(200).json({ success: true });
+    res.status(200).json({ success: true, message: 'Anmeldung erfolgreich.' });
   } catch (error) {
     console.error("Fehler beim Anmelden eines Kunden", error);
     res.status(500).json({ success: false, message: 'Anmeldung fehlgeschlagen.' });
@@ -192,5 +190,7 @@ app.post("/login", async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server läuft auf http://localhost:${PORT}`);
 });
+
+
 
 

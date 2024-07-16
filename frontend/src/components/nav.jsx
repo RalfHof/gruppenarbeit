@@ -10,6 +10,8 @@ const Nav = () => (
       <li><a href="/accessories">Accessories</a></li>
       <li><a href="/product">Product</a></li> 
       <li><a href="/warenkorb">Warenkorb</a></li>
+      <li><a href="/login">Login</a></li>
+      <li><a href="/Logout">Logout</a></li>
     </ul>
     
   </nav>

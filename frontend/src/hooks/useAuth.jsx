@@ -1,38 +1,58 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const useAuthHook = () => { // Umbenennen zu `useAuthHook`
-  const [user, setUser] = useState(null);
+const useAuthHook = () => {
   const navigate = useNavigate();
 
-  const handleLogin = (username, password) => {
-    // Hier solltest du eine Anfrage an dein Backend senden, um den Benutzer zu authentifizieren
-    // Nach erfolgreicher Authentifizierung, setze den Benutzer
-    setUser({ username });
-    navigate('/');
+  const handleLogin = async (email, password) => {
+    const response = await fetch('http://localhost:5000/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email, password }),
+    });
+
+    if (response.ok) {
+      const user = await response.json();
+      navigate('/');
+      return user;
+    } else {
+      throw new Error('Anmeldung fehlgeschlagen');
+    }
   };
 
-  const handleRegister = (username, password) => {
-    // Hier solltest du eine Anfrage an dein Backend senden, um den Benutzer zu registrieren
-    // Nach erfolgreicher Registrierung, setze den Benutzer
-    setUser({ username });
-    navigate('/');
+  const handleRegister = async (formData) => {
+    const response = await fetch('http://localhost:5000/register', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
+      const user = await response.json();
+      navigate('/');
+      return user;
+    } else {
+      throw new Error('Registrierung fehlgeschlagen');
+    }
   };
 
   const handleLogout = () => {
-    setUser(null);
     navigate('/');
   };
 
   return {
-    user,
     handleLogin,
     handleRegister,
-    handleLogout
+    handleLogout,
   };
 };
 
-export default useAuthHook; // Verwenden von `useAuthHook`
+export default useAuthHook;
+
 
 
 

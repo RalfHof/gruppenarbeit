@@ -5,12 +5,27 @@
     "firstName": "John",
     "lastName": "Doe",
     "email": "john.doe@example.com",
-    "password": "securepassword", 
+    "password": "securepassword",
     "phoneNumber": "123-456-7890",
     "shippingAddress": {
       "street": "Musterstraße 12",
       "city": "Musterstadt",
       "postalCode": "12345",
+      "country": "Deutschland"
+    }
+  },
+  {
+    "customerID": 2,
+    "userName": "hund",
+    "firstName": "Ralf",
+    "lastName": "Hofmann",
+    "email": "ralfhille1982@gogglemail.com",
+    "password": "freiheit",
+    "phoneNumber": "01626014452",
+    "shippingAddress": {
+      "street": "Liegelstrstraße 27",
+      "city": "St Leon-Rot",
+      "postalCode": "68789",
       "country": "Deutschland"
     }
   }
