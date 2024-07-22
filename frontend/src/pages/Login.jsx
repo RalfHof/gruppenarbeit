@@ -1,46 +1,47 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import { useAuth } from '../hooks/AuthProvider';
+import '../Register.css'; // Verwenden Sie dieselbe CSS-Datei
 
 const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
-  const navigate = useNavigate();
+  const { handleLogin } = useAuth();
+  const [formData, setFormData] = useState({
+    username: '',
+    password: ''
+  });
 
-  const handleLogin = async (e) => {
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value
+    });
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
-    if (!email || !password) {
-      setError('Bitte alle Felder ausfüllen.');
-      return;
-    }
-
-    try {
-      const response = await axios.post('http://localhost:5000/login', { email, password });
-      if (response.data.success) {
-        navigate('/');
-      } else {
-        setError(response.data.message);
-      }
-    } catch (err) {
-      setError('Anmeldung fehlgeschlagen.');
-    }
+    await handleLogin(formData.username, formData.password);
   };
 
   return (
-    <div>
-      <h2>Login</h2>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
-      <form onSubmit={handleLogin}>
-        <div>
-          <label>Email</label>
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-        </div>
-        <div>
-          <label>Password</label>
-          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-        </div>
+    <div className="login-container">
+      <form className="login-form" onSubmit={handleSubmit}>
+        <h1>Login</h1>
+        <label htmlFor="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          value={formData.username}
+          onChange={handleChange}
+        />
+        <label htmlFor="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          value={formData.password}
+          onChange={handleChange}
+        />
         <button type="submit">Login</button>
       </form>
     </div>

@@ -7,22 +7,14 @@ export const AuthProvider = ({ children }) => {
   const auth = useAuthHook();
   const [currentUser, setCurrentUser] = useState(null);
 
-  const handleLogin = async (username, password) => {
-    try {
-      const user = await auth.handleLogin(username, password);
-      setCurrentUser(user);
-    } catch (error) {
-      console.error('Login error:', error);
-    }
+  const handleLogin = async (email, password) => {
+    const user = await auth.handleLogin(email, password);
+    setCurrentUser(user);
   };
 
-  const handleRegister = async (username, password) => {
-    try {
-      const user = await auth.handleRegister(username, password);
-      setCurrentUser(user);
-    } catch (error) {
-      console.error('Registration error:', error);
-    }
+  const handleRegister = async (formData) => {
+    const user = await auth.handleRegister(formData);
+    setCurrentUser(user);
   };
 
   const handleLogout = () => {
@@ -31,7 +23,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ ...auth, currentUser, handleLogin, handleRegister, handleLogout }}>
+    <AuthContext.Provider value={{ currentUser, handleLogin, handleRegister, handleLogout }}>
       {children}
     </AuthContext.Provider>
   );

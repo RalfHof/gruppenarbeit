@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useAuth } from '../hooks/AuthProvider';
 import '../Register.css';
+
+
 const Register = () => {
   const { handleRegister, isAuthenticated } = useAuth();
   const [formData, setFormData] = useState({
